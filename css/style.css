@@ -17,12 +17,18 @@ body
 	min-height: 100vh;	
 }
 
+a:link, a:visited, a:active {
+            text-decoration:none;
+}
+
+a:hover{
+	text-decoration: underline;
+}
+
 .contenedor
 {
 	position: relative;
 	width: 100%;
-	max-width: 1000px;
-	min-height: 1000px;
 	background: #fff;
 	margin: 50px;
 	display: grid;
@@ -71,7 +77,6 @@ body
 	color: #fff;
 	font-size: 1.5em;
 	margin-top: 20px;
-	text-transform: uppercase;
 	text-align: center;
 	font-weight: 600;
 	line-height: 1.4em;
@@ -122,7 +127,7 @@ body
 .contactinfo ul li span
 {
 	color: #fff;
-	font-size: 11px;
+	font-size: 12px;
 	font-weight: 300;
 }
 
@@ -239,28 +244,42 @@ p
 	align-items: center;
 }
 
-.desempeño .caja h4 
-{
-	text-transform: uppercase;
-	color: #848c90;
-	font-weight: 500;
+h4{
+	color: white;
 }
 
-.desempeño .caja .porcentaje
-{
-	position: relative;
+#con{
+	text-align: center;
 	width: 100%;
-	height: 10px;
-	background: #f0f0f0;
+	height: 100px;
+	background-color: rgb(223, 236, 247);
+	margin-bottom: 20px;
+	padding: 15px;
 }
 
-.desempeño .caja .porcentaje div
-{
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	background: #3498DB;
+.conocimiento{
+	display: flex;
+	padding: 10px;
+	margin-bottom: 30px;
+}
+
+.conocimiento div{
+	width: 200px;
+}
+
+#knowledge-list ul{
+	justify-content: center;
+}
+#knowledge-list li{
+	
+	display:inline;
+	
+    padding-left:40px;
+    padding-right:40px;
+}
+
+.intereses{
+	margin-bottom: 30px;
 }
 
 .intereses ul
@@ -275,6 +294,24 @@ p
 	color: #333;
 	font-weight: 500;
 	margin: 10px 0;
+}
+
+.portafolio ul
+{
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+}
+
+.portafolio ul li
+{
+	list-style: none;
+	color: #333;
+	font-weight: 500;
+	margin: 10px 0;
+}
+
+ion-icon{
+	font-size: 20px;
 }
 
 @media (max-width: 1000px)
