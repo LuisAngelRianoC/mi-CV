@@ -273,7 +273,6 @@ h4{
 #knowledge-list li{
 	
 	display:inline;
-	
     padding-left:40px;
     padding-right:40px;
 }
@@ -321,6 +320,21 @@ ion-icon{
 		margin: 10px;
 		grid-template-columns: repeat(1,1fr);
 	}
+	
+	.conocimiento{
+		align-items: center;
+		text-align: center;
+	flex-direction: column;
+	width: 100%;
+}
+#knowledge-list li{
+	display: grid;	
+}
+
+#con{
+	height: 150px;
+}
+
 	.intereses ul
 	{
 		grid-template-columns: repeat(2,1fr);
