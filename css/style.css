@@ -324,16 +324,15 @@ ion-icon{
 	.conocimiento{
 		align-items: center;
 		text-align: center;
-	flex-direction: column;
-	width: 100%;
-}
-#knowledge-list li{
+		flex-direction: column;
+	}
+	#knowledge-list li{
 	display: grid;	
-}
+	}
 
-#con{
+	#con{
 	height: 150px;
-}
+	}
 
 	.intereses ul
 	{
