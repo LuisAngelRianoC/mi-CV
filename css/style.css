@@ -315,6 +315,9 @@ ion-icon{
 
 @media (max-width: 1000px)
 {
+	.left{
+		text-align: center;
+	}
 	.contenedor
 	{
 		margin: 10px;
@@ -326,13 +329,13 @@ ion-icon{
 		text-align: center;
 		flex-direction: column;
 	}
-	#knowledge-list li{
+#knowledge-list li{
 	display: grid;	
-	}
+}
 
-	#con{
-	height: 150px;
-	}
+#con{
+	height: 200px;
+}
 
 	.intereses ul
 	{
