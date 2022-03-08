@@ -275,6 +275,13 @@ h4 {
 .conocimiento div {
   width: 200px;
 }
+.conocimiento .knowledge-box ul li span {
+  color: #000;
+}
+
+.conocimiento .knowledge-box h3 {
+  padding-bottom: 5px;
+}
 
 #knowledge-list ul {
   justify-content: center;
