@@ -47,7 +47,7 @@ a:hover {
   flex-direction: column;
   align-items: center;
   padding-bottom: 20px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid #fff;
 }
 
 .perfiltext .perfilimg {
@@ -79,6 +79,19 @@ a:hover {
 .perfiltext h2 span {
   font-size: 0.8em;
   font-weight: 300;
+}
+
+.redes ul {
+  text-align: center;
+}
+
+.redes ul li {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 0 20px;
+  font-size: 20px;
+  color: #fff;
+  display: inline-block;
 }
 
 .contactinfo {
@@ -230,6 +243,8 @@ h4 {
   color: white;
 }
 
+/* Conocimiento */
+
 .levels {
   text-align: center;
   width: 100%;
@@ -249,7 +264,7 @@ h4 {
   color: #2734e7;
 }
 .levels #expert {
-  color: #ba27e7;
+  color: #71168d;
 }
 .conocimiento {
   display: flex;
@@ -270,6 +285,8 @@ h4 {
   padding-right: 40px;
 }
 
+/* Intereses */
+
 .intereses {
   margin-bottom: 30px;
 }
@@ -286,6 +303,8 @@ h4 {
   margin: 10px 0;
 }
 
+/* Certificados */
+
 .certificados {
   margin: 30px 0;
 }
@@ -297,6 +316,16 @@ h4 {
 .certificados ul {
   list-style: none;
 }
+
+.certificados ul li {
+  padding-bottom: 5px;
+}
+.certificados ul li a {
+  color: #000;
+  text-decoration: none;
+}
+
+/* Portafolio */
 
 .portafolio .proyect {
   text-align: center;
