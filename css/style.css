@@ -1,0 +1,425 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.contenedor {
+  position: relative;
+  width: 100%;
+  background: #fff;
+  margin: 50px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
+}
+
+.contenedor .left {
+  position: relative;
+  background: #34495e;
+  padding: 40px;
+}
+
+.perfiltext {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #fff;
+}
+
+.perfiltext .perfilimg {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.perfiltext .perfilimg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.perfiltext h2 {
+  color: #fff;
+  font-size: 1.5em;
+  margin-top: 20px;
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.4em;
+}
+
+.perfiltext h2 span {
+  font-size: 0.8em;
+  font-weight: 300;
+}
+
+.redes ul {
+  text-align: center;
+}
+
+.redes ul li {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 0 20px;
+  font-size: 20px;
+  color: #fff;
+  display: inline-block;
+}
+
+.contactinfo {
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
+
+.txtcontacto {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.contactinfo ul {
+  position: relative;
+}
+
+.contactinfo ul li {
+  position: relative;
+  list-style: none;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.contactinfo ul li .icon {
+  display: inline-block;
+  width: 30px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.contactinfo ul li span {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.contactinfo.edu li {
+  margin-bottom: 15px;
+}
+
+.contactinfo.edu h5 {
+  color: #fff;
+  font-weight: 500;
+}
+
+.contactinfo.edu h4:nth-child(2) {
+  color: #fff;
+  font-weight: 500;
+}
+
+.contactinfo.edu h4 {
+  color: #fff;
+  font-weight: 300;
+}
+
+.contactinfo.leg .porcentaje {
+  position: relative;
+  width: 100%;
+  height: 6px;
+  background: #081921;
+  display: block;
+  margin-top: 5px;
+}
+
+.contactinfo.leg .porcentaje div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #6fe727;
+}
+
+.contenedor .right {
+  position: relative;
+  background: #fff;
+  padding: 40px;
+}
+
+#qr {
+  width: 100%;
+  align-items: center;
+  text-align: center;
+}
+
+#qr img {
+  height: 150px;
+  width: auto;
+}
+
+.acerca {
+  margin-bottom: 50px;
+}
+
+.acerca:last-child {
+  margin-bottom: 0;
+}
+
+.titulo {
+  color: #34495e;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #333;
+  text-align: justify;
+}
+
+.acerca .caja {
+  display: flex;
+  flex-direction: row;
+  margin: 20px 0;
+}
+
+.acerca .caja .company {
+  min-width: 150px;
+}
+
+.acerca .caja .company h5 {
+  text-transform: uppercase;
+  color: #848c90;
+  font-weight: 600;
+}
+
+.acerca .caja .text h4 {
+  text-transform: uppercase;
+  color: #335a55;
+  font-size: 15px;
+}
+
+.desempeño {
+  margin-bottom: 50px;
+}
+.desempeño .caja {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+h4 {
+  color: white;
+}
+
+/* Conocimiento */
+
+.levels {
+  text-align: center;
+  width: 100%;
+  height: auto;
+  background-color: rgb(223, 236, 247);
+  margin-bottom: 20px;
+  padding: 15px;
+}
+
+.levels #novice {
+  color: #23cf2b;
+}
+.levels #inter {
+  color: #e7aa27;
+}
+.levels #avance {
+  color: #2734e7;
+}
+.levels #expert {
+  color: #71168d;
+}
+.conocimiento {
+  display: flex;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+.conocimiento div {
+  width: 200px;
+}
+.conocimiento .knowledge-box ul li span {
+  color: #000;
+}
+
+.conocimiento .knowledge-box h3 {
+  padding-bottom: 5px;
+}
+
+#knowledge-list ul {
+  justify-content: center;
+}
+#knowledge-list li {
+  display: inline;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+/* Intereses */
+
+.intereses {
+  margin-bottom: 30px;
+}
+
+.intereses ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.intereses ul li {
+  list-style: none;
+  color: #333;
+  font-weight: 500;
+  margin: 10px 0;
+}
+
+/* Certificados */
+
+.certificados {
+  margin: 30px 0;
+}
+
+.certificados span {
+  color: #7f0c9c;
+}
+
+.certificados ul {
+  list-style: none;
+}
+
+.certificados ul li {
+  padding-bottom: 5px;
+}
+.certificados ul li a {
+  color: #000;
+  text-decoration: none;
+}
+
+/* Portafolio */
+
+.portafolio .proyect {
+  text-align: center;
+  margin-top: 20px;
+}
+.portafolio .proyect .text {
+  margin-bottom: 10px;
+}
+
+.portafolio .proyect a {
+  text-decoration: none;
+  background: #34495e;
+  color: #fff;
+  padding: 4px 15px;
+  border-radius: 5px;
+}
+
+.portafolio .proyect span {
+  color: #2734e7;
+}
+
+.portafolio .proyect a:hover {
+  background: #fff;
+  color: #34495e;
+  border: solid 3px #34495e;
+}
+
+.portafolio .title {
+  font-weight: 600;
+}
+
+ion-icon {
+  font-size: 20px;
+}
+
+/* #Responsive */
+
+@media (max-width: 1000px) {
+  .left {
+    text-align: center;
+  }
+  .contenedor {
+    margin: 10px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .conocimiento {
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .intereses {
+    text-align: center;
+  }
+  #knowledge-list li {
+    display: grid;
+  }
+
+  #con {
+    height: 200px;
+  }
+
+  .intereses ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  * {
+    text-align: center;
+  }
+
+  .acerca .caja {
+    flex-direction: column;
+  }
+
+  .acerca .caja .company {
+    margin-bottom: 5px;
+  }
+
+  .portafolio ul {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .desempeño .caja {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
