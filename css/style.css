@@ -8,28 +8,22 @@
 }
 
 body {
-  background: #333;
+  background: #6e6e6e;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
 }
 
-a:link,
-a:visited,
-a:active {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
+a{
+  color: #fff;
 }
 
 .contenedor {
   position: relative;
   width: 100%;
   background: #fff;
-  margin: 50px;
+  margin: 20px;
   display: grid;
   grid-template-columns: 1fr 2fr;
   box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
@@ -41,16 +35,17 @@ a:hover {
   padding: 40px;
 }
 
-.perfiltext {
+/* inicio seccion perfil  */
+.perfil {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-bottom: 20px;
-  border-bottom: 1px solid #fff;
+
 }
 
-.perfiltext .perfilimg {
+.perfil-img {
   position: relative;
   width: 200px;
   height: 200px;
@@ -58,7 +53,7 @@ a:hover {
   overflow: hidden;
 }
 
-.perfiltext .perfilimg img {
+ .perfil-img img {
   position: absolute;
   top: 0;
   left: 0;
@@ -67,7 +62,7 @@ a:hover {
   object-fit: cover;
 }
 
-.perfiltext h2 {
+.perfil h2 {
   color: #fff;
   font-size: 1.5em;
   margin-top: 20px;
@@ -76,96 +71,118 @@ a:hover {
   line-height: 1.4em;
 }
 
-.perfiltext h2 span {
-  font-size: 0.8em;
-  font-weight: 300;
-}
-
-.redes ul {
-  text-align: center;
-}
-
-.redes ul li {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  padding: 0 20px;
-  font-size: 20px;
+.perfil-text {
   color: #fff;
-  display: inline-block;
+}
+/* fin seccion perfil  */
+
+/* seccion redes */
+.div-redes{
+  display: flex;
+  justify-content: space-evenly;
+  border-top: #fff solid 1px;
+  border-bottom: #fff solid 1px;
 }
 
-.contactinfo {
+.iconos-redes:hover{
+  zoom: 1.3;
+}
+
+.iconos-redes{
+  font-size: 22px;
+  margin: 10px 0;
+}
+/* fin redes */
+
+.secciones {
   padding-top: 20px;
-  margin-bottom: 20px;
+  color: #fff;
 }
 
-.txtcontacto {
-  color: #fff;
+.titulo-secciones {
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 1px;
   margin-bottom: 20px;
 }
 
-.contactinfo ul {
-  position: relative;
+
+/* seccion contacto */
+.div-contact{
+  padding: 5px 0;
+}
+.txt{
+  padding-left: 5px;
+  font-size: 14px;
 }
 
-.contactinfo ul li {
-  position: relative;
-  list-style: none;
-  margin: 10px 0;
+.div-card span{
+ padding-left: 10px;
+}
+/* fin seccion  */
+
+
+
+/* seccion educacion */
+
+.div-card{
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.div-card:hover{
+  zoom: 1.3;
+}
+
+.fecha{
+font-size: 12px;
+font-weight: 100;
+}
+
+.tipo{
+font-size: 16px;
+font-weight: 600;
+padding: 3px 0 3px 10px;
+}
+
+.escuela{
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.logo-escuela {
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
   cursor: pointer;
 }
 
-.contactinfo ul li .icon {
-  display: inline-block;
-  width: 30px;
+
+.logo-escuela:hover {
+  opacity: 0.5;
+}
+/* fin seccion */
+
+
+
+
+/* seccion idiomas */
+.card-lenguaje{
+  padding: 7px 0;
+}
+
+.leg{
+  font-size: 14px;
+  font-weight: 100;
+  padding-bottom: 8px;
+}
+.nivel{
   font-size: 18px;
-  color: #fff;
+  font-weight: 600
 }
 
-.contactinfo ul li span {
-  color: #fff;
-  font-size: 12px;
-  font-weight: 300;
-}
-
-.contactinfo.edu li {
-  margin-bottom: 15px;
-}
-
-.contactinfo.edu h5 {
-  color: #fff;
-  font-weight: 500;
-}
-
-.contactinfo.edu h4:nth-child(2) {
-  color: #fff;
-  font-weight: 500;
-}
-
-.contactinfo.edu h4 {
-  color: #fff;
-  font-weight: 300;
-}
-
-.contactinfo.leg .porcentaje {
-  position: relative;
-  width: 100%;
-  height: 6px;
-  background: #081921;
-  display: block;
-  margin-top: 5px;
-}
-
-.contactinfo.leg .porcentaje div {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  background: #6fe727;
-}
+/* fin seccion */
 
 .contenedor .right {
   position: relative;
@@ -173,17 +190,7 @@ a:hover {
   padding: 40px;
 }
 
-#qr {
-  width: 100%;
-  align-items: center;
-  text-align: center;
-}
-
-#qr img {
-  height: 150px;
-  width: auto;
-}
-
+/* seccion informacion */
 .acerca {
   margin-bottom: 50px;
 }
@@ -198,11 +205,6 @@ a:hover {
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 10px;
-}
-
-p {
-  color: #333;
-  text-align: justify;
 }
 
 .acerca .caja {
@@ -226,7 +228,9 @@ p {
   color: #335a55;
   font-size: 15px;
 }
+/* fin seccion */
 
+/* seccion experencia */
 .desempeño {
   margin-bottom: 50px;
 }
@@ -242,6 +246,7 @@ p {
 h4 {
   color: white;
 }
+/* fin seccion */
 
 /* Conocimiento */
 
@@ -252,63 +257,72 @@ h4 {
   background-color: rgb(223, 236, 247);
   margin-bottom: 20px;
   padding: 15px;
+  border-radius: 10px;
 }
 
-.levels #novice {
+.nivel-conocimieto{
+  display: flex;
+  justify-content: space-around;
+}
+
+.novice {
   color: #23cf2b;
 }
-.levels #inter {
+.inter {
   color: #e7aa27;
 }
-.levels #avance {
+.avance {
   color: #2734e7;
 }
-.levels #expert {
+.expert {
   color: #71168d;
 }
+
+.knowledge-box{
+  cursor: pointer;
+  border-radius: 10px;
+  margin: 0 5px;
+  padding: 7px;
+}
+
+.knowledge-box:hover{
+  background-color: rgb(223, 236, 247);
+}
+
 .conocimiento {
   display: flex;
   padding: 10px;
   margin-bottom: 30px;
+  justify-content: space-around;
 }
 
-.conocimiento div {
-  width: 200px;
-}
-.conocimiento .knowledge-box ul li span {
-  color: #000;
-}
-
-.conocimiento .knowledge-box h3 {
-  padding-bottom: 5px;
-}
-
-#knowledge-list ul {
+.card-title{
+  display: flex;
   justify-content: center;
 }
-#knowledge-list li {
-  display: inline;
-  padding-left: 40px;
-  padding-right: 40px;
+
+.title{
+  font-size: 16px;
+  font-weight: 600;
+  margin-right: 8px;
 }
 
-/* Intereses */
-
-.intereses {
-  margin-bottom: 30px;
+.tecnologias{
+  display: flex;
+  flex-direction: column;
+  
 }
 
-.intereses ul {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.tecnologias span{
+  font-size: 15px;
+  margin-top: 5px;
+} 
+
+.tecnologias span i{
+  font-size: 7px;
+ margin:1px 5px 4px 0px;
 }
 
-.intereses ul li {
-  list-style: none;
-  color: #333;
-  font-weight: 500;
-  margin: 10px 0;
-}
 
 /* Certificados */
 
@@ -334,27 +348,25 @@ h4 {
 
 /* Portafolio */
 
-.portafolio .proyect {
-  text-align: center;
+.portafolio {
+  text-align: justify;
   margin-top: 20px;
 }
-.portafolio .proyect .text {
+
+.title-proyect{
+  color: #34495e;
+  font-weight: 700;
+}
+
+.text {
   margin-bottom: 10px;
 }
 
-.portafolio .proyect a {
-  text-decoration: none;
-  background: #34495e;
-  color: #fff;
-  padding: 4px 15px;
-  border-radius: 5px;
-}
-
-.portafolio .proyect span {
+.proyect span {
   color: #2734e7;
 }
 
-.portafolio .proyect a:hover {
+.proyect a:hover {
   background: #fff;
   color: #34495e;
   border: solid 3px #34495e;
