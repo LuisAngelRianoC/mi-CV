@@ -111,6 +111,7 @@ a{
 .div-contact{
   padding: 5px 0;
 }
+
 .txt{
   padding-left: 5px;
   font-size: 14px;
@@ -193,6 +194,10 @@ padding: 3px 0 3px 10px;
 /* seccion informacion */
 .acerca {
   margin-bottom: 50px;
+}
+
+.acerca > p {
+ text-align: justify;
 }
 
 .acerca:last-child {
@@ -279,14 +284,9 @@ h4 {
 }
 
 .knowledge-box{
-  cursor: pointer;
   border-radius: 10px;
   margin: 0 5px;
   padding: 7px;
-}
-
-.knowledge-box:hover{
-  background-color: rgb(223, 236, 247);
 }
 
 .conocimiento {
@@ -298,7 +298,7 @@ h4 {
 
 .card-title{
   display: flex;
-  justify-content: center;
+  margin-bottom: 5px;
 }
 
 .title{
@@ -330,20 +330,14 @@ h4 {
   margin: 30px 0;
 }
 
+.certificados .lista-certificados{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
 .certificados span {
-  color: #7f0c9c;
-}
-
-.certificados ul {
-  list-style: none;
-}
-
-.certificados ul li {
-  padding-bottom: 5px;
-}
-.certificados ul li a {
-  color: #000;
-  text-decoration: none;
+  color: #0f5499;
 }
 
 /* Portafolio */
