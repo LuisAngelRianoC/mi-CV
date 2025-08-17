@@ -1,0 +1,52 @@
+const headerTranslations = {
+  es: {
+    Name: "Luis Angel Riaño Calixto",
+    "Web Developer": "Desarrollador Web",
+    Contact: "Contacto",
+    PhoneNumber: "+52 7441767228",
+    Email: "luisangelriano.c@gmail.com",
+    Location: "Acapulco, Gro. Mexico",
+    Education: "Educación",
+    "Master's Degree": "Maestría",
+    "ICT Engineering": "Ingeniería en TIC",
+    "Electronics Technician": "Técnico en Electrónica",
+    "Computer Technician": "Técnico en Computación",
+    "TecNM Acapulco": "TecNM Acapulco",
+    "TecNM Costa Chica": "TecNM Costa Chica",
+    "Conalep II - Acapulco": "Conalep II - Acapulco",
+    "Cetec - Acapulco": "Cetec - Acapulco",
+    Languages: "Idiomas",
+    Spanish: "Español",
+    English: "Inglés",
+    Japanese: "Japonés",
+    Native: "Nativo",
+    B1: "B1",
+    N5: "N5"
+  },
+  en: {
+    Name: "Luis Angel Riaño Calixto",
+    "Web Developer": "Web Developer",
+    Contact: "Contact",
+    PhoneNumber: "+52 7441767228",
+    Email: "luisangelriano.c@gmail.com",
+    Location: "Acapulco, Gro. Mexico",
+    Education: "Education",
+    "Master's Degree": "Master's Degree",
+    "ICT Engineering": "ICT Engineering",
+    "Electronics Technician": "Electronics Technician",
+    "Computer Technician": "Computer Technician",
+    "TecNM Acapulco": "TecNM Acapulco",
+    "TecNM Costa Chica": "TecNM Costa Chica",
+    "Conalep II - Acapulco": "Conalep II - Acapulco",
+    "Cetec - Acapulco": "Cetec - Acapulco",
+    Languages: "Languages",
+    Spanish: "Spanish",
+    English: "English",
+    Japanese: "Japanese",
+    Native: "Native",
+    B1: "B1",
+    N5: "N5"
+  }
+};
+
+export default headerTranslations;
