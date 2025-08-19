@@ -7,17 +7,20 @@ import ExperienceSection from '../sections/ExperienceSection.tsx';
 import KnowledgeSection from '../sections/KnowledgeSection.tsx';
 import CertificatesSection from '../sections/CertificatesSection.tsx';
 import ProjectsSection from '../sections/ProjectsSection.tsx';
+import { useTranslation } from 'react-i18next';
 
-const sections = [
-  { label: 'Profile', Component: ProfileSection },
-  { label: 'Experience', Component: ExperienceSection },
-  { label: 'Knowledge', Component: KnowledgeSection },
-  { label: 'Certificates & Courses', Component: CertificatesSection },
-  { label: 'Projects', Component: ProjectsSection },
+// Usa los labels desde locales
+const sectionKeys = [
+  { key: 'Profile', Component: ProfileSection },
+  { key: 'Experience', Component: ExperienceSection },
+  { key: 'Knowledge', Component: KnowledgeSection },
+  { key: 'Certificates & Courses', Component: CertificatesSection },
+  { key: 'Projects', Component: ProjectsSection },
 ];
 
 const MainContent: React.FC = () => {
-  const [open, setOpen] = useState<boolean[]>(Array(sections.length).fill(true));
+  const [open, setOpen] = useState<boolean[]>(Array(sectionKeys.length).fill(true));
+  const { t } = useTranslation();
 
   const handleToggle = (idx: number) => {
     setOpen((prev) => prev.map((v, i) => (i === idx ? !v : v)));
@@ -27,13 +30,16 @@ const MainContent: React.FC = () => {
     <Box
       sx={{
         pr: 1,
+        color: (theme) => theme.palette.text.primary,
+        minHeight: '100vh',
+        height: '100%',
       }}
     >
-      {sections.map(({ label, Component }, idx) => (
-        <Box key={label}>
+      {sectionKeys.map(({ key, Component }, idx) => (
+        <Box key={key} sx={{ padding: 2, bgcolor: '#CCEBCC' }}>
           <Box display="flex" alignItems="center" justifyContent="space-between">
             <Typography variant="h5" fontWeight={600} sx={{ my: 2 }}>
-              {label}
+              {t(key)}
             </Typography>
             <IconButton onClick={() => handleToggle(idx)} size="small">
               {open[idx] ? <ExpandLessIcon /> : <ExpandMoreIcon />}
@@ -42,7 +48,7 @@ const MainContent: React.FC = () => {
           <Collapse in={open[idx]}>
             <Component />
           </Collapse>
-          {idx < sections.length - 1 && <Divider sx={{ my: 2 }} />}
+          {idx < sectionKeys.length - 1 && <Divider sx={{ my: 2 }} />}
         </Box>
       ))}
     </Box>

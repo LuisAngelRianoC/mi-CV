@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Grid, Card, CardContent, Typography, Stack, CardActions } from '@mui/material';
+import { Box, List, ListItem, ListItemText, Stack, Typography, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { projectsTranslations, projectTechs } from '../locales/projects.ts';
 
@@ -22,64 +22,54 @@ const ProjectsSection: React.FC = () => {
   const lang = i18n.language.startsWith('es') ? 'es' : 'en';
   const projects = projectsTranslations[lang].projects;
 
+  // Tabla simple sin bordes
   return (
     <Box mb={2}>
-      <Grid container spacing={2}>
-        {projects.map((proj, idx) => (
-          <Grid item xs={12} sm={6} md={4} key={idx}>
-            <Card variant="outlined" sx={{ height: '100%', boxShadow:'rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px'}}>
-              <CardContent>
-                <Typography variant="h6" fontSize={'20px'} fontWeight="bold" gutterBottom>
-                  Nombre: {`${proj.name}`}
-                </Typography>
-                <Typography variant="h6" fontSize={'14px'} fontWeight="bold" gutterBottom>
-                  {`${proj.company}`}
-                </Typography>
-                <Typography variant="body2" color="text.secondary" gutterBottom>
-                  {proj.date}
-                </Typography>
-              </CardContent>
-              <CardActions
-                id="tech-stack"
-                sx={{
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  minHeight: 60,
-                  p: 0,
-                }}
-              >
-                <Stack
-                  direction="row"
-                  spacing={2}
-                  justifyContent="center"
-                  alignItems="center"
-                  sx={{ width: '100%' }}
-                >
-                  {(projectTechs[proj.id] || []).map((tech) =>
-                    faIcons[tech] ? (
-                      <i
-                        key={tech}
-                        className={faIcons[tech].className}
-                        style={{
-                          color: faIcons[tech].color,
-                          fontSize: 32,
-                          width: 40,
-                          height: 40,
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                        }}
-                        title={tech}
-                      />
-                    ) : null
-                  )}
-                </Stack>
-              </CardActions>
-            </Card>
-          </Grid>
-        ))}
-      </Grid>
+      <TableContainer>
+        <Table size="small" sx={{ minWidth: 320 }}>
+          <TableHead>
+            <TableRow>
+              <TableCell>
+                <Typography fontWeight="bold">Nombre</Typography>
+              </TableCell>
+              <TableCell>
+                <Typography fontWeight="bold">Tecnologías</Typography>
+              </TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {projects.map((proj, idx) => (
+              <TableRow key={idx} sx={{ border: 0 }}>
+                <TableCell sx={{ border: 0 }}>
+                  <Typography fontSize={16}>{proj.name}</Typography>
+                </TableCell>
+                <TableCell sx={{ border: 0 }}>
+                  <Stack direction="row" spacing={1} alignItems="center">
+                    {(projectTechs[proj.id] || []).map((tech) =>
+                      faIcons[tech] ? (
+                        <i
+                          key={tech}
+                          className={faIcons[tech].className}
+                          style={{
+                            color: faIcons[tech].color,
+                            fontSize: 22,
+                            width: 28,
+                            height: 28,
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                          }}
+                          title={tech}
+                        />
+                      ) : null
+                    )}
+                  </Stack>
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
     </Box>
   );
 };

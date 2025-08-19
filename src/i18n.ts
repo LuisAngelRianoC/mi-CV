@@ -4,6 +4,8 @@ import headerTranslations from './locales/header.ts';
 import profileTranslations from './locales/profile.ts';
 import experienceTranslations from './locales/experience.ts';
 import { projectsTranslations } from './locales/projects.ts';
+import knowledgeTranslations from './locales/knowledge.ts';
+import mainContentTranslations from './locales/mainContent.ts';
 
 
 const resources = {
@@ -13,6 +15,8 @@ const resources = {
       ...profileTranslations.es,
       ...experienceTranslations.es,
       ...projectsTranslations.es,
+      ...knowledgeTranslations.es,
+      ...mainContentTranslations.es,
     }
   },
   en: {
@@ -21,6 +25,8 @@ const resources = {
       ...profileTranslations.en,
       ...experienceTranslations.en,
       ...projectsTranslations.en,
+      ...knowledgeTranslations.en,
+      ...mainContentTranslations.en,
     }
   }
 };
@@ -37,4 +43,3 @@ i18n
   });
 
 export default i18n;
-    

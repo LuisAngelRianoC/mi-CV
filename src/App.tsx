@@ -45,10 +45,10 @@ const App: React.FC = () => {
         }}
       >
         <Grid2 container spacing={0} sx={{ flex: 1, height: '100%' }}>
-          <Grid2 xs={12} md={4} sx={{ height: '100%' }}>
+          <Grid2 xs={12} md={4} sx={{bgcolor: '#2E802E', color: '#fff'}}>
             <Header onToggleTheme={handleToggleTheme} darkMode={darkMode} />
           </Grid2>
-          <Grid2 xs={12} md={8} sx={{ height: '100%' }}>
+          <Grid2 xs={12} md={8}>
             <MainContent />
           </Grid2>
         </Grid2>
