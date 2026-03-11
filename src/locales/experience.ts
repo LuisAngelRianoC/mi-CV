@@ -3,30 +3,29 @@ const experienceTranslations = {
     Experience: "Experiencia",
     experiences: [
       {
-        date: 'Nov 2024 - Present',
-        company: 'Grupo Salinas',
-        role: 'Desarrollador Full Stack',
-        description: 'Desarrollador Full Stack enfocado en soluciones bancarias y procesos con comercios. Responsable de diseñar, desarrollar y mantener aplicaciones web que integran operaciones financieras, pasarelas de pago y flujos de negocio. Principales tareas: creación y documentación de APIs REST, mantenimiento de bases de datos (incluyendo procedimientos almacenados y consultas avanzadas), mantenimiento de microservicios, y diseño de arquitecturas y diagramas de flujo de los sistemas. Garantiza seguridad, escalabilidad y una experiencia de usuario fluida tanto para clientes bancarios como para socios comerciales.'
+        date: 'Nov 2024 - Oct 2025',
+        company: 'Polúx',
+        role: 'Ayudante de Construcción',
+        description: 'Participé como apoyo en trabajos de construcción ligera, principalmente en estructuras de madera. Realicé actividades como medición, corte y acomodo de materiales, carga y descarga, preparación del área de trabajo y limpieza general de la obra. Seguí instrucciones directas del supervisor, manteniendo orden, seguridad y apoyo constante al equipo de trabajo.'
       },
       {
-        date: 'In proceses',
-        company: 'Freelance',
-        role: 'Sistema Web Veterinario (Diseño)',
-        description: 'Diseñé y desarrollé una plantilla de aplicación web utilizando Figma, orientada a optimizar la recolección de datos para clínicas veterinarias y propietarios de mascotas. Implementé componentes de interfaz interactivos, diseños responsivos e integración de APIs simuladas para demostración. Enfoque en usabilidad, gestión eficiente de la información y tendencias modernas de diseño.'
+        date: 'May 2024 - Nov 2024',
+        company: 'Riano\'s Home',
+        role: 'Ayudante de Remodelación',
+        description: 'Brindé apoyo en la instalación de tablaroca en muros y techos, incluyendo colocación de paneles, estructura y tornillería. Realicé resanes básicos con cinta y pasta, así como preparación de superficies para pintura. Al finalizar cada jornada, apoyé en la limpieza y organización del área de trabajo.'
+      },
+       {
+        date: '2020 - 2022',
+        company: 'PlayaMar Diamante 3',
+        role: 'Mesero de Bar',
+        description: 'Brindé servicio de atención al cliente en un bar, tomando pedidos, sirviendo bebidas y alimentos, y asegurando una experiencia agradable para los clientes. Mantuve el área de trabajo limpia y organizada, y colaboré con el equipo para garantizar un servicio eficiente durante horas pico.'
       },
       {
-        date: 'In proceses',
-        company: 'Freelance',
-        role: 'Aprende Kanjis (Juego web)',
-        description: 'Creé un juego web interactivo de arrastrar y soltar para facilitar el aprendizaje de kanjis mediante actividades visuales y atractivas. Desarrollé lógica de juego personalizada, sistema de puntuación y seguimiento del progreso del usuario. Mejoré la experiencia educativa con animaciones, efectos de sonido y dificultad adaptativa.'
+        date: '2020 - 2022',
+        company: 'PlayaMar Diamante 3',
+        role: 'Recepcionista Condominio',
+        description: 'Brindé servicio de recepción en un condominio, atendiendo a residentes y visitantes, gestionando entradas y salidas, y manteniendo el área de recepción limpia y organizada. Colaboré con el equipo de mantenimiento para asegurar el buen funcionamiento del edificio. Ademas de apoyar en tareas de suministro de despensa a los condominos.'
       },
-      {
-        date: 'Julio 2024',
-        company: 'CECyTEG',
-        role: 'Plataforma de Gestión de Archivos',
-        description: 'Desarrollé un sistema integral de gestión de archivos para CECyTEG, optimizando los procesos administrativos y garantizando un manejo seguro, organizado y eficiente de los documentos institucionales. Incluyó autenticación de usuarios, acceso basado en roles, registros de auditoría y rutinas de respaldo automatizadas. Proporcioné capacitación y documentación para los usuarios finales.'
-      }
-      // ...agrega el resto de experiencias aquí...
     ]
   },
   en: {

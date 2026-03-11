@@ -40,12 +40,13 @@ const App: React.FC = () => {
           px: 4,
           py: 4,
           m: 0,
+          bgcolor: darkMode ? "#333" : "#f5f5f5",
           display: 'flex',
           flexDirection: 'column',
         }}
       >
-        <Grid2 container spacing={0} sx={{ flex: 1, height: '100%' }}>
-          <Grid2 xs={12} md={4} sx={{bgcolor: '#2E802E', color: '#fff'}}>
+        <Grid2 container spacing={0} sx={{ flex: 1, height: '100%', boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px' }}>
+          <Grid2 xs={12} md={4} sx={{ color: '#000'}}>
             <Header onToggleTheme={handleToggleTheme} darkMode={darkMode} />
           </Grid2>
           <Grid2 xs={12} md={8}>

@@ -1,20 +1,18 @@
 import React, { useState } from 'react';
 import { Typography, Box, Grid, Card, CardActionArea, CardMedia, CardContent, Dialog, DialogContent, DialogTitle } from '@mui/material';
 import { useTranslation } from 'react-i18next';
-import htmlImg from '../img/HTML.jpg';
-import cssImg from '../img/css.jpg';
 import jsImg from '../img/JavaScript.jpg';
-import sqlImg from '../img/SimpleQueriesSQL.jpg';
+import sqlImg from '../img/ComplexQueriesSQL.jpg';
 import englishImg from '../img/b1.jpg';
 import hikariImg from '../img/hikari.jpg';
+import google  from '../img/CloudDigitalLeader.jpg';
 
 const certificates = [
-  { name: 'Udemy: HTML Curse', key: 'cert_html', img: htmlImg },
-  { name: 'Udemy: CSS Curse', key: 'cert_css', img: cssImg },
   { name: 'Udemy: JavaScript Curse', key: 'cert_js', img: jsImg },
-  { name: 'Udemy: SQL - Simple Queries', key: 'cert_sql', img: sqlImg },
+  { name: 'Udemy: SQL Complex Queries', key: 'cert_sql', img: sqlImg },
   { name: 'EuroCentro: English Level B1', key: 'cert_english', img: englishImg },
   { name: 'Hikari: Kodama 6 (N5)', key: 'cert_japanese', img: hikariImg },
+  { name: 'Google Cloud Digital Leader', key: 'cert_google', img: google },
 ];
 
 const CertificatesSection: React.FC = () => {

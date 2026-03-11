@@ -14,8 +14,8 @@ const sectionKeys = [
   { key: 'Profile', Component: ProfileSection },
   { key: 'Experience', Component: ExperienceSection },
   { key: 'Knowledge', Component: KnowledgeSection },
-  { key: 'Certificates & Courses', Component: CertificatesSection },
-  { key: 'Projects', Component: ProjectsSection },
+  // { key: 'Certificates & Courses', Component: CertificatesSection },
+  // { key: 'Projects', Component: ProjectsSection },
 ];
 
 const MainContent: React.FC = () => {
@@ -29,16 +29,16 @@ const MainContent: React.FC = () => {
   return (
     <Box
       sx={{
-        pr: 1,
         color: (theme) => theme.palette.text.primary,
         minHeight: '100vh',
         height: '100%',
+        bgcolor: '#0000',
       }}
     >
       {sectionKeys.map(({ key, Component }, idx) => (
-        <Box key={key} sx={{ padding: 2, bgcolor: '#CCEBCC' }}>
+        <Box key={key} sx={{ padding: 2, bgcolor: '#e6e6e6' }}>
           <Box display="flex" alignItems="center" justifyContent="space-between">
-            <Typography variant="h5" fontWeight={600} sx={{ my: 2 }}>
+            <Typography variant="h5" fontWeight={600} sx={{ my: 2, color: '#333' }}>
               {t(key)}
             </Typography>
             <IconButton onClick={() => handleToggle(idx)} size="small">
@@ -48,7 +48,7 @@ const MainContent: React.FC = () => {
           <Collapse in={open[idx]}>
             <Component />
           </Collapse>
-          {idx < sectionKeys.length - 1 && <Divider sx={{ my: 2 }} />}
+          {idx < sectionKeys.length - 1 && <Divider sx={{ my: 2, borderColor: '#ccc' }} />}
         </Box>
       ))}
     </Box>

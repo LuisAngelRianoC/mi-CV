@@ -9,24 +9,38 @@ import { useTranslation } from 'react-i18next';
 
 const knowledge = [
   {
-    titleKey: 'Databases',
+    titleKey: 'Construcción y Remodelación',
     icon: <StorageIcon color="primary" />,
-    items: ['MySQL', 'SQL Server'],
+    items: ['Construcción ligera', 'Trabajo con madera',
+        'Instalación de tablaroca',
+        'Pintura y acabados básicos',
+        'Resanes y preparación de superficies',],
   },
   {
-    titleKey: 'Languages',
+    titleKey: 'Herramientas y Materiales',
     icon: <CodeIcon color="success" />,
-    items: ['JavaScript', 'HTML', 'CSS', 'PHP', 'Java'],
+    items: ['Uso básico de herramientas manuales',
+        'Uso básico de herramientas eléctricas',
+        'Medición y corte de materiales',
+        'Manejo y organización de materiales de obra',],
   },
   {
-    titleKey: 'Design',
+    titleKey: 'Seguridad y Organización',
     icon: <PaletteIcon sx={{ color: '#e7aa27' }} />,
-    items: ['Figma', 'Canva', 'Balsamiq', 'UML', 'Responsive Design'],
+    items: ['Limpieza y orden en obra',
+        'Seguridad básica en trabajos de construcción',
+        'Preparación de áreas de trabajo',],
   },
   {
-    titleKey: 'Frameworks & Libraries',
+    titleKey: 'Habilidades',
     icon: <LightbulbIcon sx={{ color: '#e7da27' }} />,
-    items: ['GitHub', 'Arduino', 'API REST', 'Jest', 'Bootstrap', 'React', 'Laravel', 'Node.js'],
+    items: [  
+      'Responsable',
+        'Puntual',
+        'Trabajador',
+        'Buena actitud',
+        'Trabajo en equipo',
+        'Aprendizaje rápido',],
   },
 ];
 

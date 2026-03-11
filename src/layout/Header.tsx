@@ -11,8 +11,7 @@ import SchoolIcon from '@mui/icons-material/School';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
 import { useTranslation } from 'react-i18next';
-import profileImg from '../img/perfil.jpg';
-import { projectsTranslations } from '../locales/projects.ts'; // Asegúrate de que locales tenga las traducciones necesarias
+import profileImg from '../img/perfil2.jpeg';
 
 const LANGUAGES = [
   { code: 'es', label: 'Español' },
@@ -39,13 +38,13 @@ const Header: React.FC<{ onToggleTheme: () => void; darkMode: boolean }> = ({ on
   const lang = i18n.language.startsWith('es') ? 'es' : 'en';
 
   return (
-    <Box sx={{ p: 2, color: '#fff' }}>
+    <Box sx={{  p: 2, color: '#333', bgcolor: '#f9f9f9' }}>
       <Box display="flex" flexDirection="column" alignItems="center" mb={2}>
         <IconButton
           onClick={() => setOpenAvatar(true)}
           sx={{ p: 0, borderRadius: '50%' }}
         >
-          <Avatar src={profileImg} sx={{ width: 120, height: 120, mb: 1, border: '2px solid #fff' }} />
+          <Avatar src={profileImg} sx={{ width: 120, height: 120, mb: 1, border: '2px solid #333' }} />
         </IconButton>
         <Dialog open={openAvatar} onClose={() => setOpenAvatar(false)} maxWidth="md">
           <DialogContent sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', bgcolor: 'background.paper', p: 2 }}>
@@ -62,130 +61,80 @@ const Header: React.FC<{ onToggleTheme: () => void; darkMode: boolean }> = ({ on
             />
           </DialogContent>
         </Dialog>
-        <Typography variant="h5" fontWeight={600} sx={{ color: '#fff' }}>{t('Name')}</Typography>
-        <Typography variant="subtitle1" sx={{ color: '#fff' }}>{t('Web Developer')}</Typography>
+        <Typography variant="h5" fontWeight={600} sx={{ color: '#333' }}>{t('José Miguel Riaño Calixto')}</Typography>
       </Box>
-      <Stack direction="row" spacing={2} justifyContent="center" mb={2}>
-        <IconButton onClick={onToggleTheme} sx={{ color: '#fff' }}>
-          {darkMode ? <Brightness7Icon /> : <Brightness4Icon />}
-        </IconButton>
-        <Select
-          size="small"
-          value={language}
-          onChange={e => setLanguage(e.target.value)}
-          sx={{ minWidth: 100, bgcolor: 'background.paper',
-            '& .MuiOutlinedInput-notchedOutline': { borderColor: '#fff' }
-          }}
-          inputProps={{
-            style: { color: '#fff' }
-          }}
-        >
-          {LANGUAGES.map(lang => (
-            <MenuItem key={lang.code} value={lang.code} sx={{ color: '#222' }}>{lang.label}</MenuItem>
-          ))}
-        </Select>
-      </Stack>
-      <Divider sx={{ my: 2, borderColor: '#fff', opacity: 0.3 }} />
-      <Stack direction="row" spacing={2} justifyContent="center" mb={2}>
-        <Link href="https://www.facebook.com/LuisAngelRC97" target="_blank" rel="noopener" sx={{ color: '#fff' }}>
-          <FacebookIcon />
-        </Link>
-        <Link href="https://www.linkedin.com/in/luis-angel-riaño-calixto-5b1a41200/" target="_blank" rel="noopener" sx={{ color: '#fff' }}>
-          <LinkedInIcon />
-        </Link>
-        <Link href="https://github.com/LuisAngelRianoC" target="_blank" rel="noopener" sx={{ color: '#fff' }}>
-          <GitHubIcon />
-        </Link>
-      </Stack>
-      <Typography variant="h6" gutterBottom sx={{ fontWeight: 700, color: '#fff' }}>
+      <Divider sx={{ my: 2, borderColor: '#333', opacity: 0.3 }} />
+      <Typography variant="h6" gutterBottom sx={{ fontWeight: 700, color: '#333' }}>
         {t('Contact')}
       </Typography>
       <List dense>
         <ListItem>
-          <ListItemIcon sx={{ color: '#fff' }}><PhoneIcon /></ListItemIcon>
+          <ListItemIcon sx={{ color: '#333' }}><PhoneIcon /></ListItemIcon>
           <ListItemText
             primary={
-              <Typography sx={{ fontSize: '1rem', fontWeight: 500, color: '#fff' }}>
-                {t('PhoneNumber')}
+              <Typography sx={{ fontSize: '1rem', fontWeight: 500, color: '#333' }}>
+                {t('744 260 5935')}
               </Typography>
             }
           />
         </ListItem>
         <ListItem>
-          <ListItemIcon sx={{ color: '#fff' }}><EmailIcon /></ListItemIcon>
+          <ListItemIcon sx={{ color: '#333' }}><EmailIcon /></ListItemIcon>
           <ListItemText
             primary={
-              <Typography sx={{ fontSize: '1rem', fontWeight: 500, color: '#fff' }}>
-                {t('Email')}
+              <Typography sx={{ fontSize: '1rem', fontWeight: 500, color: '#333' }}>
+                {t('josecalixto884@gmail.com')}
               </Typography>
             }
           />
         </ListItem>
         <ListItem>
-          <ListItemIcon sx={{ color: '#fff' }}><LocationOnIcon /></ListItemIcon>
+          <ListItemIcon sx={{ color: '#333' }}><LocationOnIcon /></ListItemIcon>
           <ListItemText
             primary={
-              <Typography sx={{ fontSize: '1rem', fontWeight: 500, color: '#fff' }}>
+              <Typography sx={{ fontSize: '1rem', fontWeight: 500, color: '#333' }}>
                 {t('Location')}
               </Typography>
             }
           />
         </ListItem>
       </List>
-      <Divider sx={{ my: 2, borderColor: '#fff', opacity: 0.3 }} />
-      <Typography variant="h6" gutterBottom sx={{ color: '#fff' }}>{t('Education')}</Typography>
+      <Divider sx={{ my: 2, borderColor: '#333', opacity: 0.3 }} />
+      <Typography variant="h6" gutterBottom sx={{ color: '#333' }}>{t('Education')}</Typography>
       <List dense>
         <ListItem>
-          <ListItemIcon sx={{ color: '#fff' }}><SchoolIcon /></ListItemIcon>
+          <ListItemIcon sx={{ color: '#333' }}><SchoolIcon /></ListItemIcon>
           <ListItemText
-            primary={<span style={{ color: '#fff', fontSize: '1rem', fontWeight: 600 }}>{t("Master's Degree")}</span>}
-            secondary={<span style={{ color: '#fff', fontSize: '1rem' }}>{`2022 - 2025, ${t('TecNM Acapulco')}`}</span>}
+            primary={<span style={{ color: '#333', fontSize: '1rem', fontWeight: 600 }}>{t('Técnico en Computación')}</span>}
+            secondary={<span style={{ color: '#333', fontSize: '1rem' }}>{`2017 - 2020, ${t('Conalep II - Acapulco')}`}</span>}
           />
         </ListItem>
         <ListItem>
-          <ListItemIcon sx={{ color: '#fff' }}><SchoolIcon /></ListItemIcon>
+          <ListItemIcon sx={{ color: '#333' }}><SchoolIcon /></ListItemIcon>
           <ListItemText
-            primary={<span style={{ color: '#fff', fontSize: '1rem', fontWeight: 600 }}>{t('ICT Engineering')}</span>}
-            secondary={<span style={{ color: '#fff', fontSize: '1rem' }}>{`2016 - 2021, ${t('TecNM Costa Chica')}`}</span>}
+            primary={<span style={{ color: '#333', fontSize: '1rem', fontWeight: 600 }}>{t('Estudiante')}</span>}
+            secondary={<span style={{ color: '#333', fontSize: '1rem' }}>{`2011 - 2017, ${t('Escuela Secundaria Técnica N°194 ')}`}</span>}
           />
         </ListItem>
-        <ListItem>
-          <ListItemIcon sx={{ color: '#fff' }}><SchoolIcon /></ListItemIcon>
-          <ListItemText
-            primary={<span style={{ color: '#fff', fontSize: '1rem', fontWeight: 600 }}>{t('Electronics Technician')}</span>}
-            secondary={<span style={{ color: '#fff', fontSize: '1rem' }}>{`2013 - 2016, ${t('Conalep II - Acapulco')}`}</span>}
-          />
-        </ListItem>
-        <ListItem>
-          <ListItemIcon sx={{ color: '#fff' }}><SchoolIcon /></ListItemIcon>
-          <ListItemText
-            primary={<span style={{ color: '#fff', fontSize: '1rem', fontWeight: 600 }}>{t('Computer Technician')}</span>}
-            secondary={<span style={{ color: '#fff', fontSize: '1rem' }}>{`2013 - 2015, ${t('Cetec - Acapulco')}`}</span>}
-          />
-        </ListItem>
+        
+
+
       </List>
-      <Divider sx={{ my: 2, borderColor: '#fff', opacity: 0.3 }} />
-      <Typography variant="h6" gutterBottom sx={{ color: '#fff' }}>{t('Languages')}</Typography>
+      <Divider sx={{ my: 2, borderColor: '#333', opacity: 0.3 }} />
+      <Typography variant="h6" gutterBottom sx={{ color: '#333' }}>{t('Languages')}</Typography>
       <List dense>
         <ListItem>
-          <ListItemIcon sx={{ color: '#fff' }}><LanguageIcon /></ListItemIcon>
+          <ListItemIcon sx={{ color: '#333' }}><LanguageIcon /></ListItemIcon>
           <ListItemText
-            primary={<span style={{ color: '#fff', fontSize: '1rem', fontWeight: 600 }}>{t('Spanish')}</span>}
-            secondary={<span style={{ color: '#fff', fontSize: '1rem' }}>{t('Native')}</span>}
+            primary={<span style={{ color: '#333', fontSize: '1rem', fontWeight: 600 }}>{t('Spanish')}</span>}
+            secondary={<span style={{ color: '#333', fontSize: '1rem' }}>{t('Native')}</span>}
           />
         </ListItem>
         <ListItem>
-          <ListItemIcon sx={{ color: '#fff' }}><LanguageIcon /></ListItemIcon>
+          <ListItemIcon sx={{ color: '#333' }}><LanguageIcon /></ListItemIcon>
           <ListItemText
-            primary={<span style={{ color: '#fff', fontSize: '1rem', fontWeight: 600 }}>{t('English')}</span>}
-            secondary={<span style={{ color: '#fff', fontSize: '1rem' }}>{t('B1')}</span>}
-          />
-        </ListItem>
-        <ListItem>
-          <ListItemIcon sx={{ color: '#fff' }}><LanguageIcon /></ListItemIcon>
-          <ListItemText
-            primary={<span style={{ color: '#fff', fontSize: '1rem', fontWeight: 600 }}>{t('Japanese')}</span>}
-            secondary={<span style={{ color: '#fff', fontSize: '1rem' }}>{t('N5')}</span>}
+            primary={<span style={{ color: '#333', fontSize: '1rem', fontWeight: 600 }}>{t('English')}</span>}
+            secondary={<span style={{ color: '#333', fontSize: '1rem' }}>{t('A1')}</span>}
           />
         </ListItem>
       </List>
