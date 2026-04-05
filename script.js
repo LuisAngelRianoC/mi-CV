@@ -6,7 +6,7 @@ function translateTo(lang) {
   if (select) {
     select.value = lang;
     select.dispatchEvent(new Event('change', { bubbles: true }));
-    console.log('✓ Idioma cambiado a:', lang);
+    console.log('Idioma cambiado a:', lang);
   } else {
     console.log('Selector no encontrado, reintentando...');
     setTimeout(function() {
@@ -14,9 +14,9 @@ function translateTo(lang) {
       if (selectRetry) {
         selectRetry.value = lang;
         selectRetry.dispatchEvent(new Event('change', { bubbles: true }));
-        console.log('✓ Idioma cambiado a:', lang);
+        console.log('Idioma cambiado a:', lang);
       } else {
-        console.error('✗ Widget de traducción no disponible');
+        console.error('Widget de traducción no disponible');
       }
     }, 300);
   }

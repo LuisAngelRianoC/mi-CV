@@ -45,8 +45,5 @@ mi-CV/
 **Luis Angel Riaño Calixto**  
 Desarrollador Web  
 - Email: luisangelriano.c@gmail.com
-- LinkedIn: [Tu LinkedIn si tienes]
+- LinkedIn: [LuisAngelRianoCalixto](https://www.linkedin.com/in/luis-angel-riaño-calixto-5b1a41200/)
 - GitHub: [LuisAngelRianoC](https://github.com/LuisAngelRianoC)
-
-## Licencia
-Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.

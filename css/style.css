@@ -553,6 +553,30 @@ footer {
   color: white;
 }
 
+/* Ocultar completamente el widget de Google Translate */
+#google_translate_element,
+.goog-te-banner,
+.goog-te-gadget,
+.goog-te-combo,
+.goog-te-menu2,
+.skiptranslate,
+.goog-te-notranslate,
+.goog-te-gadget-simple {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  width: 0 !important;
+  overflow: hidden !important;
+  position: fixed !important;
+  top: -9999px !important;
+  left: -9999px !important;
+  pointer-events: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+}
+
 /* PRINT */
 @media print {
   .translate {
