@@ -1,4 +1,5 @@
 var selectedLanguage = 'es';
+var leftSidebarData = null;
 
 function translateTo(lang, attemptsLeft, forceChange) {
   selectedLanguage = lang;
@@ -73,48 +74,93 @@ function createElement(tagName, className, text) {
   return element;
 }
 
-function renderCatalog(data) {
-  document.getElementById('profile-name').textContent = data.profile.name || '';
-  document.getElementById('profile-title').textContent = data.profile.title || '';
-  document.title = 'Currículum - ' + (data.profile.title || data.profile.name);
-  document.getElementById('profile-specialties').textContent = data.profile.specialties || '';
-  document.getElementById('profile-headline').textContent = data.profile.headline || '';
-  document.getElementById('profile-summary').textContent = data.profile.summary || '';
-  document.getElementById('soft-skills-list').textContent = (data.profile.softSkills || []).join(' | ');
-  document.getElementById('footer-text').textContent = data.footer || '';
+function getSidebarData(data) {
+  if (!leftSidebarData) {
+    leftSidebarData = {
+      profile: {
+        name: (data.profile && data.profile.name) || '',
+        title: (data.profile && data.profile.title) || '',
+        specialties: (data.profile && data.profile.specialties) || '',
+        headline: (data.profile && data.profile.headline) || ''
+      },
+      sections: data.sections || {},
+      contact: data.contact || [],
+      education: data.education || [],
+      languages: data.languages || []
+    };
+  }
 
-  document.querySelectorAll('[data-catalog-heading]').forEach(function(heading) {
-    heading.textContent = (data.sections || {})[heading.dataset.catalogHeading] || '';
-  });
+  return leftSidebarData;
+}
 
-  var visibleSections = Array.isArray(data.visibleSections)
-    ? data.visibleSections
-    : Array.from(document.querySelectorAll('[data-profile-section]')).map(function(section) {
-      return section.dataset.profileSection;
-    });
-  document.querySelectorAll('[data-profile-section]').forEach(function(section) {
-    section.hidden = visibleSections.indexOf(section.dataset.profileSection) === -1;
+function renderSidebar(data) {
+  var sidebarData = getSidebarData(data);
+  document.getElementById('profile-name').textContent = sidebarData.profile.name || '';
+  document.getElementById('profile-title').textContent = sidebarData.profile.title || '';
+  document.getElementById('profile-specialties').textContent = sidebarData.profile.specialties || '';
+  document.getElementById('profile-headline').textContent = sidebarData.profile.headline || '';
+
+  document.querySelectorAll('.sidebar [data-catalog-heading]').forEach(function(heading) {
+    heading.textContent = (sidebarData.sections || {})[heading.dataset.catalogHeading] || '';
   });
 
   [
     'contact-list',
     'education-list',
-    'language-list',
+    'language-list'
+  ].forEach(function(id) {
+    var element = document.getElementById(id);
+    if (element) {
+      element.textContent = '';
+    }
+  });
+
+  renderContact(sidebarData.contact || []);
+  renderEducation(sidebarData.education || []);
+  renderLanguages(sidebarData.languages || []);
+
+  document.querySelectorAll('.sidebar [data-profile-section]').forEach(function(section) {
+    section.hidden = false;
+  });
+}
+
+function renderCatalog(data) {
+  document.title = 'Currículum - ' + (data.profile.title || data.profile.name);
+  document.getElementById('profile-summary').textContent = data.profile.summary || '';
+  document.getElementById('soft-skills-list').textContent = (data.profile.softSkills || []).join(' | ');
+  document.getElementById('footer-text').textContent = data.footer || '';
+
+  document.querySelectorAll('main [data-catalog-heading]').forEach(function(heading) {
+    heading.textContent = (data.sections || {})[heading.dataset.catalogHeading] || '';
+  });
+
+  var visibleSections = Array.isArray(data.visibleSections)
+    ? data.visibleSections
+    : Array.from(document.querySelectorAll('main [data-profile-section]')).map(function(section) {
+      return section.dataset.profileSection;
+    });
+  document.querySelectorAll('main [data-profile-section]').forEach(function(section) {
+    section.hidden = visibleSections.indexOf(section.dataset.profileSection) === -1;
+  });
+
+  [
     'experience-list',
     'knowledge-list',
     'certificate-list',
     'project-list'
   ].forEach(function(id) {
-    document.getElementById(id).textContent = '';
+    var element = document.getElementById(id);
+    if (element) {
+      element.textContent = '';
+    }
   });
 
-  renderContact(data.contact || []);
-  renderEducation(data.education || []);
-  renderLanguages(data.languages || []);
   renderExperience(data.experience || []);
   renderKnowledge(data.knowledge || []);
   renderCertificates(data.certificates || []);
   renderProjects(data.projects || [], data.sections || {});
+
+  renderSidebar(data);
 }
 
 function renderContact(items) {
