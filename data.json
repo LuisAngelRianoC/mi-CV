@@ -1,0 +1,343 @@
+{
+  "profile": {
+    "name": "Luis Angel Riaño Calixto",
+    "title": "Ingeniero en Sistemas",
+    "specialties": "Desarrollo de Software | Arquitectura de Sistemas | DevOps y CI/CD | Gestión de Bases de Datos",
+    "headline": "Desarrollo y modernización de sistemas institucionales, automatización de despliegues, estandarización de buenas prácticas de ingeniería y optimización de plataformas de datos.",
+    "summary": "Ingeniero en Sistemas con formación multidisciplinaria en tecnologías de la información, sistemas computacionales, electrónica y soporte técnico. Cuento con una Maestría en Sistemas Computacionales, formación como ingeniero en TIC y estudios técnicos en electrónica y computación.\n\nExperiencia en desarrollo, mantenimiento y optimización de aplicaciones, bases de datos, API e integraciones de sistemas en entornos institucionales y empresariales. Enfocado en la automatización de procesos, la arquitectura segura de aplicaciones, la documentación técnica y la continuidad operativa.\n\nConocimientos de redes, administración de bases de datos, tecnologías en la nube, ciberseguridad e infraestructura tecnológica. Mi experiencia en desarrollo, electrónica e ingeniería de sistemas me permite colaborar en la integración de software, hardware y procesos operativos.",
+    "softSkills": [
+      "Liderazgo",
+      "Adaptabilidad",
+      "Comunicación",
+      "Trabajo en equipo",
+      "Responsabilidad",
+      "Compromiso"
+    ]
+  },
+  "sections": {
+    "contact": "Contacto",
+    "education": "Educación",
+    "languages": "Idiomas",
+    "profile": "Perfil",
+    "softSkills": "Habilidades blandas",
+    "experience": "Experiencia",
+    "knowledge": "Conocimientos",
+    "certificates": "Certificados",
+    "projects": "Proyectos",
+    "projectName": "Nombre",
+    "projectTechnologies": "Tecnologías"
+  },
+  "contact": [
+    {
+      "label": "Teléfono",
+      "value": "+52 7441767228",
+      "icon": "fa-solid fa-phone"
+    },
+    {
+      "label": "Correo",
+      "value": "lsrianoc@gmail.com",
+      "icon": "fa-solid fa-envelope"
+    },
+    {
+      "label": "LinkedIn",
+      "value": "Luis Angel Riaño Calixto",
+      "url": "https://www.linkedin.com/in/luis-angel-riaño-calixto-5b1a41200/",
+      "icon": "fa-brands fa-linkedin"
+    },
+    {
+      "label": "Ubicación",
+      "value": "CDMX, México",
+      "icon": "fa-solid fa-map-marker-alt"
+    }
+  ],
+  "education": [
+    {
+      "degree": "Maestría en Sistemas Computacionales",
+      "period": "2022 - 2025",
+      "institution": "TecNM Campus Acapulco"
+    },
+    {
+      "degree": "Ing. TIC's",
+      "period": "2016 - 2021",
+      "institution": "TecNM Costa Chica"
+    },
+    {
+      "degree": "Técnico en Electrónica",
+      "period": "2013 - 2016",
+      "institution": "Conalep II - Acapulco"
+    },
+    {
+      "degree": "Técnico en Computación",
+      "period": "2013 - 2015",
+      "institution": "Cetec - Acapulco"
+    }
+  ],
+  "languages": [
+    {
+      "name": "Español",
+      "level": "Nativo"
+    },
+    {
+      "name": "Inglés",
+      "level": "B1"
+    },
+    {
+      "name": "Japonés",
+      "level": "N5"
+    },
+    {
+      "name": "Latín",
+      "level": "Iniciante"
+    }
+  ],
+  "experience": [
+    {
+      "company": "Archivo General de la Nación (AGN)",
+      "position": "Jefe del Área de Sistemas",
+      "period": "Junio de 2026 - Actualidad",
+      "description": "Participo en la modernización tecnológica, el desarrollo y la evolución de más de 18 sistemas institucionales. Impulso la estandarización de procesos de desarrollo, la automatización de despliegues y la mejora continua de la infraestructura tecnológica. Estoy a cargo de actividades de desarrollo de software, implementación de prácticas de ingeniería, optimización de bases de datos y fortalecimiento de la continuidad operativa de los sistemas institucionales.",
+      "highlights": [
+        "Coordino técnicamente e implemento mejoras evolutivas en un portafolio de más de 18 sistemas, promoviendo su actualización tecnológica, mantenibilidad, seguridad y eficiencia operativa.",
+        "Participo en el análisis, diseño, desarrollo, implementación y mantenimiento de aplicaciones web y servicios de backend para automatizar procesos institucionales.",
+        "Diseño y configuro procesos de integración y entrega continua mediante GitLab CI/CD para automatizar validaciones, compilaciones, controles de calidad y despliegues en distintos ambientes.",
+        "Defino e implemento lineamientos de desarrollo, convenciones de código, estrategias de versionamiento, revisión de calidad, organización de repositorios y procedimientos de despliegue.",
+        "Diseño y evalúo soluciones con arquitecturas modulares y de microservicios, integración de servicios y principios de escalabilidad, reutilización, seguridad y mantenibilidad.",
+        "Asumí temporalmente responsabilidades de gestión del área de bases de datos: desarrollo, mantenimiento, revisión y optimización de funciones, procedimientos almacenados y consultas SQL, además del fortalecimiento de la integridad y consistencia de la información.",
+        "Analizo consultas y procesos de acceso a datos, identifico cuellos de botella y optimizo estructuras, índices y funciones para mejorar los tiempos de respuesta.",
+        "Administro técnicamente aplicaciones en servidores Linux y procesos con PM2; configuro variables de entorno y resuelvo problemas de puertos, servicios, conectividad y ambientes de ejecución.",
+        "Incorporo herramientas y controles para evaluar la calidad del código, identificar incidencias y promover prácticas de desarrollo seguro y mantenible, incluido SonarQube.",
+        "Diagnostico, priorizo y resuelvo fallas en aplicaciones, bases de datos y despliegues para contribuir a la estabilidad de los ambientes de desarrollo, pruebas y producción.",
+        "Colaboro con las áreas usuarias para analizar requerimientos y procesos operativos, y desarrollar soluciones alineadas con los objetivos institucionales.",
+        "Desarrollo y evoluciono soluciones de gestión archivística para la descripción, digitalización, conservación, trazabilidad y consulta documental, contribuyendo a la preservación del patrimonio documental."
+      ],
+      "technologies": [
+        {
+          "category": "Desarrollo y backend",
+          "items": "Node.js, Python, JavaScript, API y servicios de integración"
+        },
+        {
+          "category": "Bases de datos",
+          "items": "PostgreSQL, MariaDB, SQL, funciones, procedimientos almacenados, optimización de consultas e índices"
+        },
+        {
+          "category": "DevOps e infraestructura",
+          "items": "GitLab CI/CD, Git, SonarQube, Linux, PM2, Docker y Kubernetes"
+        },
+        {
+          "category": "Arquitectura",
+          "items": "Microservicios, gRPC, diseño modular e integración de sistemas"
+        }
+      ]
+    },
+    {
+      "company": "Grupo Salinas",
+      "position": "Desarrollador Full Stack",
+      "period": "Noviembre de 2024 - Marzo de 2026",
+      "description": "Participé en el desarrollo y operación de aplicaciones financieras empresariales y servicios de integración para procesos bancarios y comercios, en un entorno de alta disponibilidad.",
+      "highlights": [
+        "Desarrollé y mantuve aplicaciones financieras y API REST para operaciones bancarias e integración con comercios.",
+        "Administré y optimicé bases de datos SQL Server, procedimientos almacenados y servicios de backend.",
+        "Colaboré en la integración de sistemas, el diagnóstico de problemas y la resolución de incidencias en producción.",
+        "Participé en la planeación de arquitectura, documentación técnica y optimización de procesos.",
+        "Contribuí a fortalecer la seguridad de las aplicaciones y la confiabilidad operativa de los sistemas."
+      ],
+      "technologies": [
+        {
+          "category": "Desarrollo e integración",
+          "items": "Aplicaciones financieras, API REST, servicios de backend e integración con comercios"
+        },
+        {
+          "category": "Bases de datos",
+          "items": "SQL Server, consultas y procedimientos almacenados"
+        },
+        {
+          "category": "Operación",
+          "items": "Sistemas de alta disponibilidad, soporte a producción y resolución de incidencias"
+        }
+      ]
+    },
+    {
+      "company": "CECyTEG",
+      "position": "Desarrollador Full Stack",
+      "period": "Marzo de 2022 - Julio de 2024",
+      "description": "Desarrollé y administré una plataforma institucional de gestión documental, atendiendo tanto la evolución del sistema como su operación, mantenimiento y adopción por parte del personal administrativo.",
+      "highlights": [
+        "Desarrollé y administré la plataforma de gestión documental para las operaciones institucionales.",
+        "Implementé control de acceso basado en roles, registro de auditoría y procesos automatizados de respaldo.",
+        "Administré estructuras de bases de datos, permisos de sistema y mantenimiento de la plataforma.",
+        "Brindé soporte técnico y capacitación al personal administrativo.",
+        "Elaboré documentación técnica y contribuí a estandarizar procesos operativos.",
+        "Mejoré la organización de datos, la seguridad del sistema y la accesibilidad de la información."
+      ],
+      "technologies": [
+        {
+          "category": "Desarrollo",
+          "items": "Plataforma de gestión documental y aplicaciones web"
+        },
+        {
+          "category": "Operación y datos",
+          "items": "Bases de datos, control de acceso, auditoría y respaldos"
+        },
+        {
+          "category": "Acompañamiento",
+          "items": "Soporte técnico, capacitación y documentación para usuarios"
+        }
+      ]
+    },
+    {
+      "company": "Freelance",
+      "position": "Desarrollador Full Stack",
+      "period": "Enero de 2020 - Junio de 2022",
+      "description": "Desarrollé soluciones web a medida para clientes independientes, participando en el diseño e implementación de frontend y backend. Enfoqué el trabajo en aplicaciones responsivas y alineadas con los requerimientos de cada proyecto.",
+      "projects": [
+        {
+          "title": "Proyecto: Sistema Web Veterinario",
+          "description": "Desarrollo de una solución web a medida para el ámbito veterinario."
+        },
+        {
+          "title": "Proyecto: KanjiLab (Juego Web)",
+          "description": "Creé un juego web interactivo de arrastrar y soltar para facilitar el aprendizaje de kanjis mediante actividades visuales y atractivas. Desarrollé lógica de juego personalizada, sistema de puntuación y seguimiento del progreso del usuario. Mejoré la experiencia educativa con animaciones, efectos de sonido y dificultad adaptativa."
+        },
+        {
+          "title": "Proyecto: Zona Segura (Juego Web)",
+          "description": "Creé un juego web de preguntas múltiples para promover la educación sexual. Implementé lógica de juego, sistema de puntuación y seguimiento del progreso, con animaciones, efectos de sonido y dificultad adaptativa."
+        }
+      ],
+      "technologies": [
+        {
+          "category": "Desarrollo",
+          "items": "Desarrollo web de frontend y backend, aplicaciones responsivas"
+        },
+        {
+          "category": "Proyectos",
+          "items": "Sistema web veterinario, KanjiLab y Zona Segura"
+        }
+      ]
+    }
+  ],
+  "knowledge": [
+    {
+      "category": "Base de datos",
+      "items": [
+        "MySQL",
+        "SQL Server",
+        "MongoDB",
+        "MariaDB"
+      ]
+    },
+    {
+      "category": "Lenguajes",
+      "items": [
+        "JavaScript",
+        "TypeScript",
+        "PHP",
+        "Java"
+      ]
+    },
+    {
+      "category": "Diseño",
+      "items": [
+        "Figma",
+        "Canva",
+        "Balsamiq",
+        "UML",
+        "Archi",
+        "Draw.io"
+      ]
+    },
+    {
+      "category": "Marcos de trabajo y bibliotecas",
+      "items": [
+        "API REST",
+        "Jest",
+        "Bootstrap",
+        "React",
+        "Laravel",
+        "Node.js"
+      ]
+    },
+    {
+      "category": "Tecnologías e infraestructura",
+      "items": [
+        "Git y control de versiones",
+        "Arduino",
+        "Entorno Windows",
+        "Fundamentos de redes",
+        "Diagnóstico y resolución de problemas de sistemas",
+        "Fundamentos de respaldo y recuperación",
+        "Fundamentos de ciberseguridad",
+        "Fundamentos de computación en la nube (Google Cloud Platform)",
+        "Soporte de hardware y software"
+      ]
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Cloud Digital Leader (Google)",
+      "url": "https://drive.google.com/file/d/1Jm22_dHIIZ2d70HOjKLvCCLvAnDdMVnJ/view?usp=sharing"
+    },
+    {
+      "name": "JavaScript (Udemy)",
+      "url": "https://drive.google.com/file/d/1NvwQ5U_r-ysD_mbGB956N2UmtRNYQTck/view?usp=sharing"
+    },
+    {
+      "name": "TypeScript (Udemy)",
+      "url": ""
+    },
+    {
+      "name": "SQL (Udemy)",
+      "url": "https://drive.google.com/file/d/1t6fK6Q2ssZAWqYWstIFjZ3Bi0g42Offn/view?usp=drive_link"
+    },
+    {
+      "name": "React (Udemy)",
+      "url": ""
+    },
+    {
+      "name": "Laravel (Udemy)",
+      "url": ""
+    },
+    {
+      "name": "Inglés B1",
+      "url": "https://drive.google.com/file/d/175owFa-wimXVEGLxRYkfDG_1KHOr3FWf/view?usp=drive_link"
+    },
+    {
+      "name": "Japonés N5",
+      "url": "https://drive.google.com/file/d/1a635ilM_XXLpMcba253qrcwfMN9GRvOu/view?usp=drive_link"
+    }
+  ],
+  "projects": [
+    {
+      "name": "KanjiLab (Juego Web)",
+      "technologies": "React, TypeScript, API"
+    },
+    {
+      "name": "Plataforma de Gestión de Archivos",
+      "technologies": "PHP, Laravel, bases de datos, Bootstrap"
+    },
+    {
+      "name": "Reconocimiento Facial",
+      "technologies": "Python, OpenCV, Raspberry Pi"
+    },
+    {
+      "name": "Sistema de Riego Automático",
+      "technologies": "JavaScript, Python"
+    },
+    {
+      "name": "Zona Segura (Juego Web)",
+      "technologies": "React, TypeScript, API, Supabase"
+    },
+    {
+      "name": "Página HMK",
+      "technologies": "HTML5, CSS3, JavaScript"
+    },
+    {
+      "name": "Postrería Amador",
+      "technologies": "HTML5, CSS3, JavaScript"
+    },
+    {
+      "name": "Brazo Robótico",
+      "technologies": "C"
+    }
+  ],
+  "footer": "© 2026 Luis Angel Riaño Calixto"
+}

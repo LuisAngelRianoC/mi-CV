@@ -3,23 +3,23 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>CV - Luis Angel Riaño</title>
+  <title>Currículum - Luis Angel Riaño Calixto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
 </head>
 
 <body>
-
   <div id="google_translate_element"></div>
-
   <script>
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'es',
-      includedLanguages: 'es,en,ja'
-    }, 'google_translate_element');
-  }
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'es',
+        includedLanguages: 'es,en,ja'
+      }, 'google_translate_element');
+    }
   </script>
 
   <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
@@ -31,131 +31,33 @@
 
       <!-- PERFIL -->
       <section class="perfil-section">
-        <div class="profile-photo-container">
+        <!-- <div class="profile-photo-container">
           <img src="./img/perfil.jpg" alt="Foto de perfil" class="profile-photo">
-        </div>
+        </div> -->
         <div class="profile-text">
-          <h1>Luis Angel Riaño Calixto</h1>
-          <h2>Desarrollador Web</h2>
+          <h1 id="profile-name"></h1>
+          <h2 id="profile-title"></h2>
+          <p id="profile-specialties" class="profile-specialties"></p>
+          <p id="profile-headline" class="profile-headline"></p>
         </div>
       </section>
 
       <!-- CONTACTO -->
       <section>
-        <h3>Contacto</h3>
-        <div class="contact-item">
-          <div class="contact-icon">
-            <i class="fa-solid fa-phone"></i>
-          </div>
-          <div class="contact-content">
-            <p class="contact-label">Teléfono</p>
-            <p class="contact-value">+52 7441767228</p>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon">
-            <i class="fa-solid fa-envelope"></i>
-          </div>
-          <div class="contact-content">
-            <p class="contact-label">Correo</p>
-            <p class="contact-value">luisangelriano.c@gmail.com</p>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon">
-            <i class="fa-brands fa-linkedin"></i>
-          </div>
-          <div class="contact-content">
-            <p class="contact-label">LinkedIn</p>
-            <p class="contact-value"><a href="https://www.linkedin.com/in/luis-angel-riaño-calixto-5b1a41200/" target="_blank">Luis Angel Riaño Calixto <i class="fa-solid fa-external-link-alt"></i></a></p>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon">
-            <i class="fa-solid fa-map-marker-alt"></i>
-          </div>
-          <div class="contact-content">
-            <p class="contact-label">Ubicación</p>
-            <p class="contact-value">CDMX, México</p>
-          </div>
-        </div>
+        <h3 data-catalog-heading="contact"></h3>
+        <div id="contact-list"></div>
       </section>
 
       <!-- EDUCACIÓN -->
       <section>
-        <h3>Educación</h3>
-        <div class="education-item">
-          <div class="education-icon">
-            <i class="fa-solid fa-graduation-cap"></i>
-          </div>
-          <div class="education-content">
-            <h4 class="degree-title">Maestría en Sistemas Computacionales</h4>
-            <p class="degree-period">2022 - 2025</p>
-            <p class="degree-institution">TecNM Campus Acapulco</p>
-          </div>
-        </div>
-        <div class="education-item">
-          <div class="education-icon">
-            <i class="fa-solid fa-graduation-cap"></i>
-          </div>
-          <div class="education-content">
-            <h4 class="degree-title">Ing. TIC's</h4>
-            <p class="degree-period">2016 - 2021</p>
-            <p class="degree-institution">TecNM Costa Chica</p>
-          </div>
-        </div>
-        <div class="education-item">
-          <div class="education-icon">
-            <i class="fa-solid fa-graduation-cap"></i>
-          </div>
-          <div class="education-content">
-            <h4 class="degree-title">Técnico en Electrónica</h4>
-            <p class="degree-period">2013 - 2016</p>
-            <p class="degree-institution">Conalep II - Acapulco</p>
-          </div>
-        </div>
-        <div class="education-item">
-          <div class="education-icon">
-            <i class="fa-solid fa-graduation-cap"></i>
-          </div>
-          <div class="education-content">
-            <h4 class="degree-title">Técnico en Computación</h4>
-            <p class="degree-period">2013 - 2015</p>
-            <p class="degree-institution">Cetec - Acapulco</p>
-          </div>
-        </div>
+        <h3 data-catalog-heading="education"></h3>
+        <div id="education-list"></div>
       </section>
 
       <!-- IDIOMAS -->
       <section>
-        <h3>Idiomas</h3>
-        <div class="language-item">
-          <div class="language-icon">
-            <i class="fa-solid fa-globe"></i>
-          </div>
-          <div class="language-content">
-            <p class="language-name">Español</p>
-            <p class="language-level">Nativo</p>
-          </div>
-        </div>
-        <div class="language-item">
-          <div class="language-icon">
-            <i class="fa-solid fa-globe"></i>
-          </div>
-          <div class="language-content">
-            <p class="language-name">Inglés</p>
-            <p class="language-level">B1</p>
-          </div>
-        </div>
-        <div class="language-item">
-          <div class="language-icon">
-            <i class="fa-solid fa-globe"></i>
-          </div>
-          <div class="language-content">
-            <p class="language-name">Japonés</p>
-            <p class="language-level">N5</p>
-          </div>
-        </div>
+        <h3 data-catalog-heading="languages"></h3>
+        <div id="language-list"></div>
       </section>
 
     </aside>
@@ -165,251 +67,46 @@
 
       <!-- PERFIL -->
       <section class="perfil">
-        <h3>Perfil</h3>
-        <p>
-          Desarrollador web apasionado por la creación de soluciones digitales innovadoras y eficientes. Me motiva enfrentar nuevos retos que impulsen mi crecimiento profesional y personal. Soy autodidacta, domino tres idiomas y me mantengo en constante actualización mediante cursos tanto oficiales como independientes, con el objetivo de ofrecer un alto nivel profesional. Disfruto aprender de cada experiencia, así como leer, apreciar el arte, mantenerme activo y, en ocasiones, jugar videojuegos. Me considero una persona adaptable, con habilidades de liderazgo y un alto sentido de responsabilidad. La lealtad, el compromiso y la honradez son valores fundamentales en mi vida profesional y personal.
-        </p>
+        <h3 data-catalog-heading="profile"></h3>
+        <p id="profile-summary"></p>
 
         <!-- HABILIDADES BLANDAS -->
         <div class="soft-skills">
-          <h4>Habilidades blandas</h4>
-          <p>Liderazgo | Adaptabilidad | Comunicación | Trabajo en equipo | Responsabilidad | Compromiso</p>
+          <h4 data-catalog-heading="softSkills"></h4>
+          <p id="soft-skills-list"></p>
         </div>
       </section>
 
       <!-- EXPERIENCIA -->
       <section>
-        <h3>Experiencia</h3>
-        <div class="job">
-          <div class="job-header">
-            <div>
-              <h4>Grupo Salinas</h4>
-              <p class="job-position">Desarrollador Full Stack</p>
-            </div>
-            <p class="job-period">Nov 2024 - Mar 2026</p>
-          </div>
-          <p class="job-description">
-            Desarrollé y mantuve aplicaciones web orientadas al sector bancario y a la integración con comercios,
-            participando en la implementación de soluciones para operaciones financieras y pasarelas de pago. Fui
-            responsable de diseñar y documentar APIs REST, optimizar y administrar bases de datos mediante consultas
-            avanzadas y procedimientos almacenados, así como dar mantenimiento a microservicios y definir arquitecturas
-            y diagramas de flujo. Enfocado en garantizar seguridad, escalabilidad y una experiencia de usuario eficiente
-            tanto para clientes bancarios como para socios comerciales.
-          </p>
-        </div>
-
-        <div class="job">
-          <div class="job-header">
-            <div>
-              <h4>CECyTEG</h4>
-              <p class="job-position">Desarrollador Full Stack</p>
-            </div>
-            <p class="job-period">Mar 2022 - Jul 2024</p>
-          </div>
-          <p class="job-description">
-            Desarrollé un sistema integral de gestión documental que optimizó los procesos administrativos y mejoró la
-            organización y seguridad de la información institucional. Implementé control de acceso basado en roles,
-            registros de auditoría y respaldos automatizados, además de estructurar la base de datos y la lógica del
-            sistema. También elaboré documentación técnica y brindé capacitación a usuarios finales para asegurar una
-            correcta adopción de la plataforma.
-          </p>
-        </div>
-
-        <div class="job">
-          <div class="job-header">
-            <div>
-              <h4>Freelance</h4>
-              <p class="job-position">Desarrollador Full Stack</p>
-            </div>
-            <p class="job-period">Ene 2020 - Jun 2022</p>
-          </div>
-          <p class="job-description">
-            Desarrollé soluciones web a medida para clientes independientes, enfocándome en la creación de aplicaciones
-            responsivas, optimizadas y alineadas a los requerimientos de negocio. Participé en el diseño e
-            implementación tanto del frontend como del backend, priorizando el rendimiento, la usabilidad y la
-            escalabilidad de las aplicaciones.
-          </p>
-          <div class="subjob">
-            <h5>Proyecto: Sistema Web Veterinario</h5>
-            <p>
-              Desarrollé soluciones web a medida para clientes independientes, enfocándome en la creación de
-              aplicaciones responsivas, optimizadas y alineadas a los requerimientos de negocio. Participé en el diseño
-              e implementación tanto del frontend como del backend, priorizando el rendimiento, la usabilidad y la
-              escalabilidad de las aplicaciones.
-            </p>
-          </div>
-          <div class="subjob">
-            <h5>Proyecto: KanjiLab (Juego Web)</h5>
-            <p>Creé un juego web interactivo de arrastrar y soltar para facilitar el aprendizaje de kanjis mediante
-              actividades visuales y atractivas.
-              Desarrollé lógica de juego personalizada, sistema de puntuación y seguimiento del progreso del usuario.
-              Mejoré la experiencia
-              educativa con animaciones, efectos de sonido y dificultad adaptativa.</p>
-          </div>
-          <div class="subjob">
-            <h5>Proyecto: Zona Segura (Juego Web)</h5>
-            <p>Creé un juego web de preguntas multiples para promover la educación sexual, con un diseño atractivo y una
-              interfaz intuitiva. Implementé lógica de
-              juego personalizada, sistema de puntuación y seguimiento del progreso del usuario. Mejoré la experiencia
-              educativa con animaciones, efectos de sonido y dificultad adaptativa.
-            </p>
-          </div>
-        </div>
+        <h3 data-catalog-heading="experience"></h3>
+        <div id="experience-list"></div>
 
       </section>
 
       <!-- CONOCIMIENTOS -->
       <section>
-        <h2 class="titulo">Conocimientos</h2>
-        <div class="knowledge-section">
-          <div class="knowledge-category">
-            <h4>Base de datos</h4>
-            <ul>
-              <li>MySQL</li>
-              <li>SQL Server</li>
-              <li>MongoDB</li>
-              <li>MariaDB</li>
-            </ul>
-          </div>
-
-          <div class="knowledge-category">
-            <h4>Lenguajes</h4>
-            <ul>
-              <li>JavaScript</li>
-              <li>TypeScript</li>
-              <li>PHP</li>
-              <li>Java</li>
-            </ul>
-          </div>
-
-          <div class="knowledge-category">
-            <h4>Diseño</h4>
-            <ul>
-              <li>Figma</li>
-              <li>Canva</li>
-              <li>Balsamiq</li>
-              <li>UML</li>
-              <li>Archi</li>
-              <li>Draw.io</li>
-            </ul>
-          </div>
-
-          <div class="knowledge-category">
-            <h4>Frameworks & Librerias</h4>
-            <ul>
-              <li>GitHub</li>
-              <li>Arduino</li>
-              <li>API REST</li>
-              <li>Jest</li>
-              <li>Bootstrap</li>
-              <li>React</li>
-              <li>Laravel</li>
-              <li>Node.js</li>
-            </ul>
-          </div>
-        </div>
+        <h2 class="titulo" data-catalog-heading="knowledge"></h2>
+        <div class="knowledge-section" id="knowledge-list"></div>
       </section>
 
       <!-- CERTIFICADOS -->
       <section>
-        <h3>Certificados</h3>
-        <ul class="certificate-list">
-          <li><a href="https://drive.google.com/file/d/1Jm22_dHIIZ2d70HOjKLvCCLvAnDdMVnJ/view?usp=sharing"
-              target="_blank">Cloud Digital Leader (Google)<i class="fa-solid fa-external-link-alt"></i></a></li>
-          <li><a href="https://drive.google.com/file/d/1NvwQ5U_r-ysD_mbGB956N2UmtRNYQTck/view?usp=sharing"
-              target="_blank">JavaScript (Udemy)<i class="fa-solid fa-external-link-alt"></i></a></li>
-          <li><a href="" target="_blank">TypeScript (Udemy)<i class="fa-solid fa-external-link-alt"></i></a></li>
-          <li><a href="https://drive.google.com/file/d/1t6fK6Q2ssZAWqYWstIFjZ3Bi0g42Offn/view?usp=drive_link"
-              target="_blank">SQL (Udemy)<i class="fa-solid fa-external-link-alt"></i></a></li>
-          <li><a href="" target="_blank">React (Udemy)<i class="fa-solid fa-external-link-alt"></i></a></li>
-          <li><a href="" target="_blank">Laravel (Udemy)<i class="fa-solid fa-external-link-alt"></i></a></li>
-          <li><a href="https://drive.google.com/file/d/175owFa-wimXVEGLxRYkfDG_1KHOr3FWf/view?usp=drive_link"
-              target="_blank">Inglés B1<i class="fa-solid fa-external-link-alt"></i></a></li>
-          <li><a href="https://drive.google.com/file/d/1a635ilM_XXLpMcba253qrcwfMN9GRvOu/view?usp=drive_link"
-              target="_blank">Japonés N5<i class="fa-solid fa-external-link-alt"></i></a></li>
-        </ul>
+        <h3 data-catalog-heading="certificates"></h3>
+        <ul class="certificate-list" id="certificate-list"></ul>
       </section>
 
       <!-- PROYECTOS -->
       <section>
-        <h3>Proyectos</h3>
-        <div class="project-list">
-          <div class="project-row project-heading">
-            <div class="project-name"><strong>Nombre</strong></div>
-            <div class="project-tech-heading"><strong>Tecnologías</strong></div>
-          </div>
-          <div class="project-row">
-            <div class="project-name">KanjiLab (Juego Web)</div>
-            <div class="project-tech">
-              <span class="tech-item tech-js"><i class="fa-brands fa-js"></i></span>
-              <span class="tech-item tech-html"><i class="fa-brands fa-html5"></i></span>
-              <span class="tech-item tech-css"><i class="fa-brands fa-css3-alt"></i></span>
-            </div>
-          </div>
-          <div class="project-row">
-            <div class="project-name">Plataforma de Gestión de Archivos</div>
-            <div class="project-tech">
-              <span class="tech-item tech-php"><i class="fa-brands fa-php"></i></span>
-              <span class="tech-item tech-laravel"><i class="fa-brands fa-laravel"></i></span>
-              <span class="tech-item tech-database"><i class="fa-solid fa-database"></i></span>
-              <span class="tech-item tech-bootstrap"><i class="fa-brands fa-bootstrap"></i></span>
-            </div>
-          </div>
-          <div class="project-row">
-            <div class="project-name">Reconocimiento Facial</div>
-            <div class="project-tech">
-              <span class="tech-item tech-python"><i class="fa-brands fa-python"></i></span>
-              <span class="tech-item tech-opencv"><i class="fa-solid fa-cogs"></i></span>
-              <span class="tech-item tech-raspberry"><i class="fa-brands fa-raspberry-pi"></i></span>
-            </div>
-          </div>
-          <div class="project-row">
-            <div class="project-name">Sistema de Riego Automático</div>
-            <div class="project-tech">
-              <span class="tech-item tech-js"><i class="fa-brands fa-js"></i></span>
-              <span class="tech-item tech-python"><i class="fa-brands fa-python"></i></span>
-            </div>
-          </div>
-          <div class="project-row">
-            <div class="project-name">Zona Segura (Juego Web)</div>
-            <div class="project-tech">
-              <span class="tech-item tech-html"><i class="fa-brands fa-html5"></i></span>
-              <span class="tech-item tech-css"><i class="fa-brands fa-css3-alt"></i></span>
-              <span class="tech-item tech-js"><i class="fa-brands fa-js"></i></span>
-            </div>
-          </div>
-          <div class="project-row">
-            <div class="project-name">Página HMK</div>
-            <div class="project-tech">
-              <span class="tech-item tech-html"><i class="fa-brands fa-html5"></i></span>
-              <span class="tech-item tech-css"><i class="fa-brands fa-css3-alt"></i></span>
-              <span class="tech-item tech-js"><i class="fa-brands fa-js"></i></span>
-            </div>
-          </div>
-          <div class="project-row">
-            <div class="project-name">Postrería Amador</div>
-            <div class="project-tech">
-              <span class="tech-item tech-html"><i class="fa-brands fa-html5"></i></span>
-              <span class="tech-item tech-css"><i class="fa-brands fa-css3-alt"></i></span>
-              <span class="tech-item tech-js"><i class="fa-brands fa-js"></i></span>
-            </div>
-          </div>
-          <div class="project-row">
-            <div class="project-name">Brazo Robótico</div>
-            <div class="project-tech">
-              <span class="tech-item tech-c">C</span>
-            </div>
-          </div>
-        </div>
+        <h3 data-catalog-heading="projects"></h3>
+        <div class="project-list" id="project-list"></div>
       </section>
 
       <footer>
-        © 2026 Luis Angel Riaño Calixto
+        <span id="footer-text"></span>
       </footer>
     </main>
   </div>
-
-  <script src="script.js"></script>
 
   <!-- BOTONES TRADUCIR FIJO -->
   <div class="translate">
@@ -417,6 +114,8 @@
     <button onclick="translateTo('en')">EN</button>
     <button onclick="translateTo('ja')">JP</button>
   </div>
+
+  <script src="script.js"></script>
 
 </body>
 

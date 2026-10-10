@@ -1,22 +1,23 @@
-# Mi CV
+# Mi currículum
 
 ## Descripción
-Este proyecto es un currículum vitae (CV) interactivo y responsivo desarrollado como un sitio web estático. Presenta información profesional de manera organizada y visualmente atractiva, incluyendo secciones como perfil, experiencia laboral, educación, conocimientos técnicos, certificados y proyectos.
+Este proyecto es un currículum vitae interactivo y adaptable, desarrollado como un sitio web estático. Presenta el perfil profesional, la experiencia laboral, la educación, los conocimientos técnicos, los certificados y los proyectos.
 
 ## Características
-- **Diseño Responsivo**: Optimizado para dispositivos móviles y de escritorio.
-- **Traducción Automática**: Integración con Google Translate para cambiar entre español e inglés.
-- **Iconos y Colores**: Uso de FontAwesome para iconos y colores temáticos para diferentes secciones.
-- **Layout Profesional**: Sidebar con información personal y main content con detalles profesionales.
+- **Diseño adaptable**: optimizado para dispositivos móviles y de escritorio.
+- **Traducción automática**: integración con Google Translate.
+- **Iconos y colores**: uso de Font Awesome e identidad visual por sección.
+- **Diseño profesional**: barra lateral con información personal y contenido principal con detalles profesionales.
 
-## Tecnologías Utilizadas
-- **HTML5**: Estructura del sitio web.
-- **CSS3**: Estilos y diseño responsivo con flexbox y grid.
-- **JavaScript**: Funcionalidad de traducción automática.
-- **FontAwesome**: Iconos para mejorar la interfaz.
-- **Google Translate API**: Para la traducción del contenido.
+## Tecnologías utilizadas
+- **HTML5**: estructura del sitio web.
+- **CSS3**: estilos y diseño adaptable con Flexbox y Grid.
+- **JavaScript**: generación del currículum desde el catálogo y controles de traducción.
+- **Catálogo JSON**: información centralizada en `data.json`.
+- **Font Awesome**: iconos de la interfaz.
+- **Google Translate**: traducción del contenido.
 
-## Instalación y Uso
+## Instalación y uso
 1. Clona el repositorio:
    ```bash
    git clone https://github.com/LuisAngelRianoC/mi-CV.git
@@ -25,25 +26,29 @@ Este proyecto es un currículum vitae (CV) interactivo y responsivo desarrollado
    ```bash
    cd mi-CV
    ```
-3. Abre el archivo `index.html` en tu navegador web preferido.
+3. Inicia un servidor web local (por ejemplo, con la extensión Live Server de VS Code) y abre `index.html` desde la dirección del servidor. El navegador bloquea la carga de `data.json` cuando se abre el HTML directamente como archivo local.
 
-No se requieren dependencias adicionales ni instalación de paquetes, ya que es un sitio web estático.
+No se requieren dependencias adicionales; el proyecto es un sitio web estático.
 
-## Estructura del Proyecto
+## Administración del contenido
+Edita los datos personales, la experiencia, los conocimientos, los certificados y los proyectos en `data.json`. El archivo `index.html` conserva la estructura visual y `script.js` genera las secciones a partir del catálogo.
+
+## Estructura del proyecto
 ```
 mi-CV/
-├── index.html          # Archivo principal del CV
+├── index.html          # Archivo principal del currículum
+├── data.json           # Catálogo centralizado con la información del CV
 ├── css/
-│   └── style.css       # Estilos CSS
-├── script.js           # JavaScript para traducción
+│   └── style.css        # Estilos de la página
+├── script.js            # Generación del contenido y traducción
 ├── img/
-│   └── profile.jpg     # Foto de perfil
-└── README.md           # Este archivo
+│   └── perfil.jpg       # Fotografía de perfil
+└── README.md            # Este archivo
 ```
 
 ## Autor
 **Luis Angel Riaño Calixto**  
-Desarrollador Web  
-- Email: luisangelriano.c@gmail.com
-- LinkedIn: [LuisAngelRianoCalixto](https://www.linkedin.com/in/luis-angel-riaño-calixto-5b1a41200/)
+Ingeniero en Sistemas  
+- Correo: luisangelriano.c@gmail.com
+- LinkedIn: [Luis Angel Riaño Calixto](https://www.linkedin.com/in/luis-angel-riaño-calixto-5b1a41200/)
 - GitHub: [LuisAngelRianoC](https://github.com/LuisAngelRianoC)
