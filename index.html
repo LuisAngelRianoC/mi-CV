@@ -22,7 +22,31 @@
     }
   </script>
 
-  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <nav class="top-menu" aria-label="Opciones del currículum">
+    <div class="profile-switch" aria-label="Seleccionar perfil profesional">
+      <span>Perfil:</span>
+      <button type="button" class="profile-switch-button is-active" data-profile-file="./data.json" aria-pressed="true">
+        Sistemas
+      </button>
+      <button type="button" class="profile-switch-button" data-profile-file="./data-mesero.json" aria-pressed="false">
+        Servicio al cliente
+      </button>
+    </div>
+    <div class="menu-actions">
+      <div class="translate" aria-label="Seleccionar idioma">
+        <button type="button" data-language="es" aria-label="Ver en español">ES</button>
+        <button type="button" data-language="en" aria-label="Ver en inglés">EN</button>
+        <button type="button" data-language="ja" aria-label="Ver en japonés">JP</button>
+      </div>
+      <button type="button" class="export-pdf" id="export-pdf">
+        <i class="fa-solid fa-file-pdf" aria-hidden="true"></i>
+        Exportar PDF
+      </button>
+    </div>
+    <span class="translate-status" id="translate-status" role="status" aria-live="polite"></span>
+  </nav>
 
   <div class="container">
 
@@ -43,19 +67,19 @@
       </section>
 
       <!-- CONTACTO -->
-      <section>
+      <section data-profile-section="contact">
         <h3 data-catalog-heading="contact"></h3>
         <div id="contact-list"></div>
       </section>
 
       <!-- EDUCACIÓN -->
-      <section>
+      <section data-profile-section="education">
         <h3 data-catalog-heading="education"></h3>
         <div id="education-list"></div>
       </section>
 
       <!-- IDIOMAS -->
-      <section>
+      <section data-profile-section="languages">
         <h3 data-catalog-heading="languages"></h3>
         <div id="language-list"></div>
       </section>
@@ -66,38 +90,38 @@
     <main>
 
       <!-- PERFIL -->
-      <section class="perfil">
+      <section class="perfil" data-profile-section="summary">
         <h3 data-catalog-heading="profile"></h3>
         <p id="profile-summary"></p>
 
         <!-- HABILIDADES BLANDAS -->
-        <div class="soft-skills">
+        <div class="soft-skills" data-profile-section="softSkills">
           <h4 data-catalog-heading="softSkills"></h4>
           <p id="soft-skills-list"></p>
         </div>
       </section>
 
       <!-- EXPERIENCIA -->
-      <section>
+      <section data-profile-section="experience">
         <h3 data-catalog-heading="experience"></h3>
         <div id="experience-list"></div>
 
       </section>
 
       <!-- CONOCIMIENTOS -->
-      <section>
+      <section data-profile-section="knowledge">
         <h2 class="titulo" data-catalog-heading="knowledge"></h2>
         <div class="knowledge-section" id="knowledge-list"></div>
       </section>
 
       <!-- CERTIFICADOS -->
-      <section>
+      <section data-profile-section="certificates">
         <h3 data-catalog-heading="certificates"></h3>
         <ul class="certificate-list" id="certificate-list"></ul>
       </section>
 
       <!-- PROYECTOS -->
-      <section>
+      <section data-profile-section="projects">
         <h3 data-catalog-heading="projects"></h3>
         <div class="project-list" id="project-list"></div>
       </section>
@@ -106,13 +130,6 @@
         <span id="footer-text"></span>
       </footer>
     </main>
-  </div>
-
-  <!-- BOTONES TRADUCIR FIJO -->
-  <div class="translate">
-    <button onclick="translateTo('es')">ES</button>
-    <button onclick="translateTo('en')">EN</button>
-    <button onclick="translateTo('ja')">JP</button>
   </div>
 
   <script src="script.js"></script>

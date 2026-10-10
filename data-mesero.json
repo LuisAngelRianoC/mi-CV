@@ -1,0 +1,78 @@
+{
+  "profile": {
+    "name": "Luis Angel Riaño Calixto",
+    "title": "Mesero | Atención al cliente",
+    "specialties": "",
+    "headline": "",
+    "summary": "Profesional de servicio con 12 años de experiencia como mesero en Playa Mar Diamante 3. Enfocado en brindar una atención cordial, oportuna y atenta a las necesidades de cada cliente, y en contribuir a una experiencia agradable durante su visita.",
+    "softSkills": [
+      "Atención al cliente",
+      "Comunicación cordial",
+      "Trabajo en equipo",
+      "Actitud de servicio",
+      "Organización",
+      "Responsabilidad"
+    ]
+  },
+  "sections": {
+    "contact": "Contacto",
+    "languages": "Idiomas",
+    "profile": "Perfil",
+    "softSkills": "Habilidades de servicio",
+    "experience": "Experiencia"
+  },
+  "visibleSections": [
+    "contact",
+    "languages",
+    "summary",
+    "softSkills",
+    "experience"
+  ],
+  "contact": [
+    {
+      "label": "Teléfono",
+      "value": "+52 7441767228",
+      "icon": "fa-solid fa-phone"
+    },
+    {
+      "label": "Correo",
+      "value": "lsrianoc@gmail.com",
+      "icon": "fa-solid fa-envelope"
+    },
+    {
+      "label": "Ubicación",
+      "value": "CDMX, México",
+      "icon": "fa-solid fa-map-marker-alt"
+    }
+  ],
+  "languages": [
+    {
+      "name": "Español",
+      "level": "Nativo"
+    },
+    {
+      "name": "Inglés",
+      "level": "B1"
+    },
+    {
+      "name": "Japonés",
+      "level": "N5"
+    }
+  ],
+  "experience": [
+    {
+      "company": "Playa Mar Diamante 3",
+      "position": "Mesero | Servicio y atención al cliente",
+      "period": "12 años de experiencia",
+      "description": "Atención y servicio a clientes en restaurante, procurando una experiencia amable y eficiente durante su estancia.",
+      "highlights": [
+        "Atención cordial y seguimiento a las solicitudes de los comensales.",
+        "Orientación a los clientes sobre el menú y apoyo durante el servicio.",
+        "Coordinación con el equipo para brindar atención oportuna.",
+        "Atención de comentarios y necesidades de los clientes con disposición y respeto.",
+        "Apoyo para mantener el orden y la presentación del área de servicio."
+      ]
+    }
+  ],
+  "footer": "© 2026 Luis Angel Riaño Calixto"
+}

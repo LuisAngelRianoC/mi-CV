@@ -32,6 +32,60 @@ body {
   box-shadow: 0 12px 36px rgb(17 40 59 / 8%);
 }
 
+.top-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 12px 30px;
+  background: var(--color-paper);
+  color: var(--color-muted);
+  font-size: 13px;
+}
+
+.profile-switch,
+.menu-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.menu-actions {
+  margin-left: auto;
+}
+
+.profile-switch-button {
+  padding: 6px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font: inherit;
+  cursor: pointer;
+}
+
+.profile-switch-button:hover,
+.profile-switch-button:focus-visible {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.profile-switch-button.is-active {
+  border-color: var(--color-ink);
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+
+.translate-status {
+  position: absolute;
+  top: 100%;
+  right: 16px;
+  z-index: 5;
+  color: #9b2c2c;
+}
+
 /* SIDEBAR */
 .sidebar {
   width: 32%;
@@ -631,12 +685,8 @@ footer {
   text-align: left;
 }
 
-/* TRADUCCIÓN */
+/* Controles de idioma */
 .translate {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 1000;
   display: flex;
   gap: 8px;
 }
@@ -659,6 +709,26 @@ footer {
   color: white;
 }
 
+.export-pdf {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 12px;
+  border: 1px solid var(--color-accent);
+  border-radius: 4px;
+  background: var(--color-accent);
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.export-pdf:hover,
+.export-pdf:focus-visible {
+  background: var(--color-ink);
+  border-color: var(--color-ink);
+}
+
 .catalog-error {
   padding: 12px 16px;
   border-left: 3px solid var(--color-accent);
@@ -666,15 +736,22 @@ footer {
   color: var(--color-ink);
 }
 
-/* Ocultar completamente el widget de Google Translate */
-#google_translate_element,
+/* Mantener disponible el selector para el control de idioma personalizado. */
+#google_translate_element {
+  position: absolute !important;
+  top: 0 !important;
+  left: -10000px !important;
+  display: block !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+}
+
 .goog-te-banner,
-.goog-te-gadget,
-.goog-te-combo,
 .goog-te-menu2,
-.skiptranslate,
 .goog-te-notranslate,
-.goog-te-gadget-simple {
+.goog-te-gadget-simple,
+.goog-te-gadget img {
   display: none !important;
   visibility: hidden !important;
   opacity: 0 !important;
@@ -690,22 +767,6 @@ footer {
   border: 0 !important;
 }
 
-/* PRINT */
-@media print {
-  .translate {
-    display: none;
-  }
-
-  body {
-    background: #fff;
-  }
-
-  .container {
-    max-width: none;
-    box-shadow: none;
-  }
-}
-
 @media (max-width: 800px) {
   .container {
     display: block;
@@ -718,14 +779,22 @@ footer {
 }
 
 @media (max-width: 560px) {
+  .top-menu {
+    align-items: stretch;
+    flex-direction: column;
+    padding: 12px 16px;
+    flex-wrap: wrap;
+  }
+
+  .profile-switch,
+  .menu-actions {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
   .sidebar,
   main {
     padding: 24px 20px;
-  }
-
-  .translate {
-    top: 10px;
-    right: 10px;
   }
 
   .project-row {
@@ -740,6 +809,285 @@ footer {
   .knowledge-category {
     grid-template-columns: 1fr;
     gap: 4px;
+  }
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 12mm;
+  }
+
+  html,
+  body {
+    width: auto;
+    min-width: 0;
+    margin: 0;
+    background: #fff;
+    color: #243746;
+    font-size: 9.5pt;
+    line-height: 1.4;
+  }
+
+  .top-menu,
+  #google_translate_element,
+  body > .skiptranslate,
+  iframe.goog-te-banner-frame,
+  #goog-gt-tt {
+    display: none !important;
+  }
+
+  .container {
+    display: block;
+    width: 100%;
+    max-width: none;
+    min-height: auto;
+    margin: 0;
+    background: #fff;
+    box-shadow: none;
+  }
+
+  .sidebar {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 4mm 6mm;
+    width: 100%;
+    padding: 0 0 5mm;
+    background: #fff;
+    color: #243746;
+    border-bottom: 1.5pt solid #183247;
+  }
+
+  .sidebar .perfil-section {
+    grid-column: 1 / -1;
+    margin: 0;
+  }
+
+  .sidebar section {
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  .sidebar h1,
+  .sidebar h2,
+  .sidebar h3,
+  .sidebar .profile-text p,
+  .sidebar .degree-title,
+  .sidebar .degree-period,
+  .sidebar .degree-institution,
+  .sidebar .contact-label,
+  .sidebar .contact-value,
+  .sidebar .language-name,
+  .sidebar .language-level {
+    color: #243746;
+  }
+
+  .sidebar h1 {
+    font-size: 19pt;
+  }
+
+  .sidebar h2 {
+    font-size: 12pt;
+  }
+
+  .sidebar h3 {
+    margin-bottom: 2mm;
+    font-size: 10pt;
+  }
+
+  .sidebar .profile-text p {
+    margin-top: 1.5mm;
+    font-size: 8pt;
+  }
+
+  .education-item,
+  .contact-item,
+  .language-item {
+    gap: 2mm;
+    margin-bottom: 1.5mm;
+  }
+
+  .education-icon,
+  .contact-icon,
+  .language-icon {
+    width: 6mm;
+    height: auto;
+  }
+
+  .education-icon i,
+  .contact-icon i,
+  .language-icon i {
+    color: #13847f;
+    font-size: 9pt;
+  }
+
+  .degree-title,
+  .contact-value,
+  .language-name {
+    font-size: 8pt;
+  }
+
+  .degree-period,
+  .degree-institution,
+  .contact-label,
+  .language-level {
+    font-size: 7pt;
+  }
+
+  .language-level {
+    padding: 0;
+    background: transparent;
+  }
+
+  main {
+    width: 100%;
+    padding: 5mm 0 0;
+    text-align: left;
+  }
+
+  main > section {
+    margin: 0 0 5mm;
+    padding: 0 0 3mm;
+    border-bottom: 0.5pt solid #dce5eb;
+    break-inside: auto;
+    page-break-inside: auto;
+  }
+
+  main > section > h2,
+  main > section > h3,
+  .knowledge-category h4,
+  .job-header,
+  .subjob h5,
+  .project-heading {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  main > section > h2,
+  main > section > h3 {
+    margin: 0 0 2.5mm;
+    font-size: 12pt;
+    color: #183247;
+  }
+
+  .perfil,
+  .job,
+  .subjob {
+    break-inside: auto;
+    page-break-inside: auto;
+  }
+
+  .perfil p,
+  .soft-skills p,
+  .job-description,
+  .subjob p {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .job {
+    padding: 3mm 0;
+    border-top: 0.5pt solid #dce5eb;
+  }
+
+  .job:first-child {
+    border-top: 0;
+    padding-top: 0;
+  }
+
+  .job-header {
+    margin-bottom: 1.5mm;
+  }
+
+  .job-header h4 {
+    font-size: 10pt;
+  }
+
+  .job-position,
+  .job-period {
+    font-size: 8pt;
+  }
+
+  .job-description {
+    margin: 1.5mm 0;
+  }
+
+  .job-highlights {
+    margin: 1.5mm 0 0;
+    padding-left: 5mm;
+  }
+
+  .job-highlights li {
+    margin-bottom: 1mm;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .subjob {
+    margin-top: 2mm;
+    padding-left: 3mm;
+  }
+
+  .subjob h5 {
+    margin-bottom: 1mm;
+    font-size: 9pt;
+  }
+
+  .knowledge-section {
+    margin-top: 0;
+  }
+
+  .knowledge-category {
+    grid-template-columns: 35mm 1fr;
+    gap: 3mm;
+    padding: 2mm 0;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .knowledge-category h4,
+  .knowledge-category li {
+    font-size: 8pt;
+  }
+
+  .certificate-list {
+    gap: 0 8mm;
+  }
+
+  .certificate-list li {
+    padding: 1.5mm 0;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .project-list {
+    gap: 1mm;
+    margin-top: 0;
+  }
+
+  .project-row {
+    padding: 1.5mm 0;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  footer {
+    margin-top: 3mm;
+    font-size: 7pt;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
   }
 
   .job-period {

@@ -1,37 +1,58 @@
-function translateTo(lang) {
-  console.log('Cambiando idioma a:', lang);
-  
+var selectedLanguage = 'es';
+
+function translateTo(lang, attemptsLeft, forceChange) {
+  selectedLanguage = lang;
   var select = document.querySelector('.goog-te-combo');
-  
-  if (select) {
+  var status = document.getElementById('translate-status');
+
+  if (!select) {
+    if (attemptsLeft === undefined) {
+      attemptsLeft = 20;
+    }
+    if (attemptsLeft > 0) {
+      window.setTimeout(function() {
+        translateTo(lang, attemptsLeft - 1, forceChange);
+      }, 250);
+      return;
+    }
+    status.textContent = 'El traductor no está disponible. Verifica tu conexión e inténtalo de nuevo.';
+    console.error('No se encontró el selector de idioma de Google Translate.');
+    return;
+  }
+
+  status.textContent = '';
+  if (forceChange || select.value !== lang) {
     select.value = lang;
     select.dispatchEvent(new Event('change', { bubbles: true }));
-    console.log('Idioma cambiado a:', lang);
-  } else {
-    console.log('Selector no encontrado, reintentando...');
-    setTimeout(function() {
-      var selectRetry = document.querySelector('.goog-te-combo');
-      if (selectRetry) {
-        selectRetry.value = lang;
-        selectRetry.dispatchEvent(new Event('change', { bubbles: true }));
-        console.log('Idioma cambiado a:', lang);
-      } else {
-        console.error('Widget de traducción no disponible');
-      }
-    }, 300);
   }
 }
 
-function ObtenerDatos() {
-  fetch('./data.json')
+var activeProfileRequest = 0;
+
+function ObtenerDatos(file) {
+  var requestId = ++activeProfileRequest;
+  fetch(file)
     .then(function(response) {
       if (!response.ok) {
-        throw new Error('No se pudo cargar data.json: ' + response.status);
+        throw new Error('No se pudo cargar ' + file + ': ' + response.status);
       }
       return response.json();
     })
-    .then(renderCatalog)
+    .then(function(data) {
+      if (requestId !== activeProfileRequest) {
+        return;
+      }
+      renderCatalog(data);
+      if (selectedLanguage !== 'es') {
+        window.setTimeout(function() {
+          translateTo(selectedLanguage, undefined, true);
+        }, 500);
+      }
+    })
     .catch(function(error) {
+      if (requestId !== activeProfileRequest) {
+        return;
+      }
       console.error('Error al cargar el catálogo del CV:', error);
       var errorMessage = document.createElement('p');
       errorMessage.className = 'catalog-error';
@@ -53,25 +74,47 @@ function createElement(tagName, className, text) {
 }
 
 function renderCatalog(data) {
-  document.getElementById('profile-name').textContent = data.profile.name;
-  document.getElementById('profile-title').textContent = data.profile.title;
-  document.getElementById('profile-specialties').textContent = data.profile.specialties;
-  document.getElementById('profile-headline').textContent = data.profile.headline;
-  document.getElementById('profile-summary').textContent = data.profile.summary;
-  document.getElementById('soft-skills-list').textContent = data.profile.softSkills.join(' | ');
-  document.getElementById('footer-text').textContent = data.footer;
+  document.getElementById('profile-name').textContent = data.profile.name || '';
+  document.getElementById('profile-title').textContent = data.profile.title || '';
+  document.title = 'Currículum - ' + (data.profile.title || data.profile.name);
+  document.getElementById('profile-specialties').textContent = data.profile.specialties || '';
+  document.getElementById('profile-headline').textContent = data.profile.headline || '';
+  document.getElementById('profile-summary').textContent = data.profile.summary || '';
+  document.getElementById('soft-skills-list').textContent = (data.profile.softSkills || []).join(' | ');
+  document.getElementById('footer-text').textContent = data.footer || '';
 
   document.querySelectorAll('[data-catalog-heading]').forEach(function(heading) {
-    heading.textContent = data.sections[heading.dataset.catalogHeading];
+    heading.textContent = (data.sections || {})[heading.dataset.catalogHeading] || '';
   });
 
-  renderContact(data.contact);
-  renderEducation(data.education);
-  renderLanguages(data.languages);
-  renderExperience(data.experience);
-  renderKnowledge(data.knowledge);
-  renderCertificates(data.certificates);
-  renderProjects(data.projects, data.sections);
+  var visibleSections = Array.isArray(data.visibleSections)
+    ? data.visibleSections
+    : Array.from(document.querySelectorAll('[data-profile-section]')).map(function(section) {
+      return section.dataset.profileSection;
+    });
+  document.querySelectorAll('[data-profile-section]').forEach(function(section) {
+    section.hidden = visibleSections.indexOf(section.dataset.profileSection) === -1;
+  });
+
+  [
+    'contact-list',
+    'education-list',
+    'language-list',
+    'experience-list',
+    'knowledge-list',
+    'certificate-list',
+    'project-list'
+  ].forEach(function(id) {
+    document.getElementById(id).textContent = '';
+  });
+
+  renderContact(data.contact || []);
+  renderEducation(data.education || []);
+  renderLanguages(data.languages || []);
+  renderExperience(data.experience || []);
+  renderKnowledge(data.knowledge || []);
+  renderCertificates(data.certificates || []);
+  renderProjects(data.projects || [], data.sections || {});
 }
 
 function renderContact(items) {
@@ -215,6 +258,9 @@ function renderCertificates(items) {
 }
 
 function renderProjects(items, sections) {
+  if (!items.length) {
+    return;
+  }
   var list = document.getElementById('project-list');
   var heading = createElement('div', 'project-row project-heading');
   var projectName = createElement('div', 'project-name');
@@ -234,4 +280,25 @@ function renderProjects(items, sections) {
   });
 }
 
-ObtenerDatos();
+document.querySelectorAll('.profile-switch-button').forEach(function(button) {
+  button.addEventListener('click', function() {
+    document.querySelectorAll('.profile-switch-button').forEach(function(profileButton) {
+      var isActive = profileButton === button;
+      profileButton.classList.toggle('is-active', isActive);
+      profileButton.setAttribute('aria-pressed', String(isActive));
+    });
+    ObtenerDatos(button.dataset.profileFile);
+  });
+});
+
+document.querySelectorAll('[data-language]').forEach(function(button) {
+  button.addEventListener('click', function() {
+    translateTo(button.dataset.language, undefined, true);
+  });
+});
+
+document.getElementById('export-pdf').addEventListener('click', function() {
+  window.print();
+});
+
+ObtenerDatos('./data.json');

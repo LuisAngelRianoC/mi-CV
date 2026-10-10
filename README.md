@@ -26,18 +26,19 @@ Este proyecto es un currículum vitae interactivo y adaptable, desarrollado como
    ```bash
    cd mi-CV
    ```
-3. Inicia un servidor web local (por ejemplo, con la extensión Live Server de VS Code) y abre `index.html` desde la dirección del servidor. El navegador bloquea la carga de `data.json` cuando se abre el HTML directamente como archivo local.
+3. Inicia un servidor web local (por ejemplo, con la extensión Live Server de VS Code) y abre `index.html` desde la dirección del servidor. El navegador bloquea la carga de los catálogos JSON cuando se abre el HTML directamente como archivo local.
 
 No se requieren dependencias adicionales; el proyecto es un sitio web estático.
 
 ## Administración del contenido
-Edita los datos personales, la experiencia, los conocimientos, los certificados y los proyectos en `data.json`. El archivo `index.html` conserva la estructura visual y `script.js` genera las secciones a partir del catálogo.
+Edita los datos personales, la experiencia, los conocimientos, los certificados y los proyectos del perfil de sistemas en `data.json`. El perfil de servicio al cliente se administra por separado en `data-mesero.json`; ambos se pueden alternar desde el menú superior. Desde ese menú también se cambia el idioma y se puede exportar el currículum a un PDF de varias páginas mediante la opción de impresión del navegador. El diseño de impresión adapta el contenido para evitar que las secciones y responsabilidades queden cortadas entre páginas.
 
 ## Estructura del proyecto
 ```
 mi-CV/
 ├── index.html          # Archivo principal del currículum
 ├── data.json           # Catálogo centralizado con la información del CV
+├── data-mesero.json    # Catálogo del perfil de servicio al cliente
 ├── css/
 │   └── style.css        # Estilos de la página
 ├── script.js            # Generación del contenido y traducción
